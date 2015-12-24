@@ -1,0 +1,2601 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>Histogram.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+<style><!--
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:link {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:active {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:visited:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }
+#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<style id="disable_before_iOS_5"><!--
+#tocMenu {
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+}
+#bodyContents {
+		width: auto;
+		left: 235px;
+		right: 0;
+		padding-left: 15px;
+		position: fixed;
+		height: 100%;
+		overflow-y: scroll;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))) {
+        if (navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)) {
+                /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+                var del_style_elt = document.getElementById("disable_before_iOS_5");
+                if (del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+// --></script><script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script><style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+<!-- headerDoc=Header;  uid=//apple_ref/doc/header/Histogram.h;   name=Histogram.h -->
+<a name="//apple_ref/doc/header/Histogram.h"></a>
+<table id="hd_outermost_table" height="100%" width="100%"><tr>
+<td valign="top" id="tocMenu" src="toc.html"></td>
+<td id="bodyContents" valign="top">
+<a name="top"></a>
+<h1><a name="Histogram.h">Histogram.h</a></h1>
+<div class="spec_sheet_info_box"><table cellspacing="0" class="specbox"><tr>
+<td scope="row"><b>Includes:</b></td>
+<td><div style="margin-bottom:1px"><div class="content_text">
+<a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/header/vImage_Types.h" logicalPath="//apple_ref/doc/header/vImage_Types.h" target="_top">&lt;vImage/vImage_Types.h&gt;</a></div></div></td>
+</tr></table></div>
+<h2>Introduction</h2>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/doc/header/Histogram.h;name=start --><p>Exports interfaces for collecting histograms of images, and causing images to conform to histograms.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/doc/header/Histogram.h;name=end --><!-- end discussion -->
+<hr class="afterClassOrHeaderInfo">
+<br><a name="HeaderDoc_groups"><h2 class="h2tight">Groups</h2></a>
+
+<h3>Ends-In Contrast Stretch</h3>
+<div class="group_desc_indent">
+<p></p>
+<p>Readjust the image pixel value distribution to use only some of the range of available intensities.
+</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888" logicalPath="//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888" target="_top">vImageEndsInContrastStretch_ARGB8888</a></tt></dt>
+<dd><p>Performs an ends-in contrast stretch operation on an ARGB8888 source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF" logicalPath="//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF" target="_top">vImageEndsInContrastStretch_ARGBFFFF</a></tt></dt>
+<dd><p>Performs a histogram specification operation on an ARGBFFFF source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_Planar8" logicalPath="//apple_ref/c/func/vImageEndsInContrastStretch_Planar8" target="_top">vImageEndsInContrastStretch_Planar8</a></tt></dt>
+<dd><p>Performs an ends-in contrast stretch operation on a Planar8 source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF" logicalPath="//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF" target="_top">vImageEndsInContrastStretch_PlanarF</a></tt></dt>
+<dd><p>Performs an ends-in contrast stretch operation on a PlanarF source image.
+</p></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>Histogram Specification</h3>
+<div class="group_desc_indent">
+<p></p>
+<p>These functions cause the source image pixel distribution to conform to the
+desired histogram.
+</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramSpecification_ARGB8888" logicalPath="//apple_ref/c/func/vImageHistogramSpecification_ARGB8888" target="_top">vImageHistogramSpecification_ARGB8888</a></tt></dt>
+<dd><p>Performs a histogram specification operation on an ARGB8888 source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF" logicalPath="//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF" target="_top">vImageHistogramSpecification_ARGBFFFF</a></tt></dt>
+<dd><p>Performs a histogram specification operation on an ARGBFFFF source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramSpecification_Planar8" logicalPath="//apple_ref/c/func/vImageHistogramSpecification_Planar8" target="_top">vImageHistogramSpecification_Planar8</a></tt></dt>
+<dd><p>Performs a histogram specification operation on a Planar8 source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramSpecification_PlanarF" logicalPath="//apple_ref/c/func/vImageHistogramSpecification_PlanarF" target="_top">vImageHistogramSpecification_PlanarF</a></tt></dt>
+<dd><p>Performs a histogram specification operation on a PlanarF source image.
+</p></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>Histogram Calculation</h3>
+<div class="group_desc_indent">
+<p></p>
+<p>These functions build a histogram of the frequency of occurence of 
+each channel value in the provided image.
+</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramCalculation_ARGB8888" logicalPath="//apple_ref/c/func/vImageHistogramCalculation_ARGB8888" target="_top">vImageHistogramCalculation_ARGB8888</a></tt></dt>
+<dd><p>Calculates histograms for each channel of an ARGB8888 image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF" logicalPath="//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF" target="_top">vImageHistogramCalculation_ARGBFFFF</a></tt></dt>
+<dd><p>Calculates histograms for each channel of an ARGBFFFF image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramCalculation_Planar8" logicalPath="//apple_ref/c/func/vImageHistogramCalculation_Planar8" target="_top">vImageHistogramCalculation_Planar8</a></tt></dt>
+<dd>
+<p>Calculates a histogram for a Planar8 image.
+</p>
+</dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramCalculation_PlanarF" logicalPath="//apple_ref/c/func/vImageHistogramCalculation_PlanarF" target="_top">vImageHistogramCalculation_PlanarF</a></tt></dt>
+<dd><p>Calculates a histogram for a PlanarF image.
+</p></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>Contrast Stretch</h3>
+<div class="group_desc_indent">
+<p></p>
+<p>Some images do not make enough use of the light and dark ends of the spectrum.
+vImageContrastStretch functions widen the pixel value distribution to use a wider
+range of values.
+</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageContrastStretch_ARGB8888" logicalPath="//apple_ref/c/func/vImageContrastStretch_ARGB8888" target="_top">vImageContrastStretch_ARGB8888</a></tt></dt>
+<dd><p>Stretches the contrast of an ARGB8888 source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageContrastStretch_ARGBFFFF" logicalPath="//apple_ref/c/func/vImageContrastStretch_ARGBFFFF" target="_top">vImageContrastStretch_ARGBFFFF</a></tt></dt>
+<dd><p>Stretches the contrast of  an ARGBFFFF source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageContrastStretch_Planar8" logicalPath="//apple_ref/c/func/vImageContrastStretch_Planar8" target="_top">vImageContrastStretch_Planar8</a></tt></dt>
+<dd><p>Stretches the contrast of a Planar8 source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageContrastStretch_PlanarF" logicalPath="//apple_ref/c/func/vImageContrastStretch_PlanarF" target="_top">vImageContrastStretch_PlanarF</a></tt></dt>
+<dd><p>Stretches the contrast of a PlanarF source image.
+</p></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>Histogram Equalization</h3>
+<div class="group_desc_indent">
+<p></p>
+<p>These functions attempt to change an image such that its histogram
+contains an even distribution of values.
+</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEqualization_ARGB8888" logicalPath="//apple_ref/c/func/vImageEqualization_ARGB8888" target="_top">vImageEqualization_ARGB8888</a></tt></dt>
+<dd><p>Equalizes the histogram of an ARGB8888 source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEqualization_ARGBFFFF" logicalPath="//apple_ref/c/func/vImageEqualization_ARGBFFFF" target="_top">vImageEqualization_ARGBFFFF</a></tt></dt>
+<dd><p>Equalizes the histogram of an ARGBFFFF source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEqualization_Planar8" logicalPath="//apple_ref/c/func/vImageEqualization_Planar8" target="_top">vImageEqualization_Planar8</a></tt></dt>
+<dd><p>Equalizes the histogram of a Planar8 source image.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEqualization_PlanarF" logicalPath="//apple_ref/c/func/vImageEqualization_PlanarF" target="_top">vImageEqualization_PlanarF</a></tt></dt>
+<dd><p>Equalizes the histogram of a PlanarF source image.
+</p></dd>
+</dl>
+</div>
+<hr class="afterGroupHeading">
+<a name="HeaderDoc_functions"></a>
+<h2 class="h2tight">Functions</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageContrastStretch_ARGB8888" target="_top">vImageContrastStretch_ARGB8888</a></tt></dt>
+<dd><p>Stretches the contrast of an ARGB8888 source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageContrastStretch_ARGBFFFF" target="_top">vImageContrastStretch_ARGBFFFF</a></tt></dt>
+<dd><p>Stretches the contrast of  an ARGBFFFF source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageContrastStretch_Planar8" target="_top">vImageContrastStretch_Planar8</a></tt></dt>
+<dd><p>Stretches the contrast of a Planar8 source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageContrastStretch_PlanarF" target="_top">vImageContrastStretch_PlanarF</a></tt></dt>
+<dd><p>Stretches the contrast of a PlanarF source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888" target="_top">vImageEndsInContrastStretch_ARGB8888</a></tt></dt>
+<dd><p>Performs an ends-in contrast stretch operation on an ARGB8888 source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF" target="_top">vImageEndsInContrastStretch_ARGBFFFF</a></tt></dt>
+<dd><p>Performs a histogram specification operation on an ARGBFFFF source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_Planar8" target="_top">vImageEndsInContrastStretch_Planar8</a></tt></dt>
+<dd><p>Performs an ends-in contrast stretch operation on a Planar8 source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF" target="_top">vImageEndsInContrastStretch_PlanarF</a></tt></dt>
+<dd><p>Performs an ends-in contrast stretch operation on a PlanarF source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageEqualization_ARGB8888" target="_top">vImageEqualization_ARGB8888</a></tt></dt>
+<dd><p>Equalizes the histogram of an ARGB8888 source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageEqualization_ARGBFFFF" target="_top">vImageEqualization_ARGBFFFF</a></tt></dt>
+<dd><p>Equalizes the histogram of an ARGBFFFF source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageEqualization_Planar8" target="_top">vImageEqualization_Planar8</a></tt></dt>
+<dd><p>Equalizes the histogram of a Planar8 source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageEqualization_PlanarF" target="_top">vImageEqualization_PlanarF</a></tt></dt>
+<dd><p>Equalizes the histogram of a PlanarF source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageHistogramCalculation_ARGB8888" target="_top">vImageHistogramCalculation_ARGB8888</a></tt></dt>
+<dd><p>Calculates histograms for each channel of an ARGB8888 image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF" target="_top">vImageHistogramCalculation_ARGBFFFF</a></tt></dt>
+<dd><p>Calculates histograms for each channel of an ARGBFFFF image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageHistogramCalculation_Planar8" target="_top">vImageHistogramCalculation_Planar8</a></tt></dt>
+<dd>
+<p>Calculates a histogram for a Planar8 image.
+</p>
+</dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageHistogramCalculation_PlanarF" target="_top">vImageHistogramCalculation_PlanarF</a></tt></dt>
+<dd><p>Calculates a histogram for a PlanarF image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageHistogramSpecification_ARGB8888" target="_top">vImageHistogramSpecification_ARGB8888</a></tt></dt>
+<dd><p>Performs a histogram specification operation on an ARGB8888 source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF" target="_top">vImageHistogramSpecification_ARGBFFFF</a></tt></dt>
+<dd><p>Performs a histogram specification operation on an ARGBFFFF source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageHistogramSpecification_Planar8" target="_top">vImageHistogramSpecification_Planar8</a></tt></dt>
+<dd><p>Performs a histogram specification operation on a Planar8 source image.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageHistogramSpecification_PlanarF" target="_top">vImageHistogramSpecification_PlanarF</a></tt></dt>
+<dd><p>Performs a histogram specification operation on a PlanarF source image.
+</p></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageContrastStretch_ARGB8888;   name=vImageContrastStretch_ARGB8888 --><a name="//apple_ref/c/func/vImageContrastStretch_ARGB8888"></a>
+<h3><a name="vImageContrastStretch_ARGB8888">vImageContrastStretch_ARGB8888</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageContrastStretch_ARGB8888;name=start --><!-- begin abstract --></p>
+<p>Stretches the contrast of an ARGB8888 source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageContrastStretch_ARGB8888;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageContrastStretch_ARGB8888;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageContrastStretch_ARGB8888" logicalPath="//apple_ref/c/instm/vImageContrastStretch_ARGB8888 //apple_ref/c/clm/vImageContrastStretch_ARGB8888 //apple_ref/c/intfcm/vImageContrastStretch_ARGB8888 //apple_ref/c/intfm/vImageContrastStretch_ARGB8888 //apple_ref/c/func/vImageContrastStretch_ARGB8888" target="_top"><span class="function">vImageContrastStretch_ARGB8888</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageContrastStretch_ARGB8888;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_ARGB8888/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_ARGB8888/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_ARGB8888/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_ARGB8888/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_ARGB8888/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_ARGB8888/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageLeaveAlphaUnchanged  Copy the alpha channel to the destination image unchanged
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match
+   kvImageNullPointerArgument      src or dest pointer is NULL.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageContrastStretch_ARGB8888;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      For each channel:
+          Compute the histogram of the input image;
+          Generate LookUp table based on the histogram
+          Transform final image using the LUT. For each pixel, do the following:
+              dest[x] = LUT[src[x]];
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<p>All four channel histogram functions (i.e. those that support ARGB8888 or ARGBFFFF images)
+work equally well on four channel images with other channel orderings such as RGBA8888 or BGRAFFFF.
+</p>
+<p>vImageEndsInContrastStretch_ARGB8888 or vImageTableLookUp_ARGB8888 may be used instead when more control
+over the stretch is desired.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageContrastStretch_ARGB8888;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageContrastStretch_ARGBFFFF;   name=vImageContrastStretch_ARGBFFFF --><a name="//apple_ref/c/func/vImageContrastStretch_ARGBFFFF"></a>
+<h3><a name="vImageContrastStretch_ARGBFFFF">vImageContrastStretch_ARGBFFFF</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageContrastStretch_ARGBFFFF;name=start --><!-- begin abstract --></p>
+<p>Stretches the contrast of  an ARGBFFFF source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageContrastStretch_ARGBFFFF;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageContrastStretch_ARGBFFFF;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageContrastStretch_ARGBFFFF" logicalPath="//apple_ref/c/instm/vImageContrastStretch_ARGBFFFF //apple_ref/c/clm/vImageContrastStretch_ARGBFFFF //apple_ref/c/intfcm/vImageContrastStretch_ARGBFFFF //apple_ref/c/intfm/vImageContrastStretch_ARGBFFFF //apple_ref/c/func/vImageContrastStretch_ARGBFFFF" target="_top"><span class="function">vImageContrastStretch_ARGBFFFF</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">tempBuffer</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">histogram_entries</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">minVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">maxVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageContrastStretch_ARGBFFFF;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/tempBuffer;   name=tempBuffer -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/tempBuffer"></a>
+<code>tempBuffer</code>
+</dt>
+<dd><p>A pointer to a temporary buffer. If you pass NULL, the function allocates the buffer,
+then deallocates it before returning. Alternatively, you can allocate the buffer yourself, 
+in which case you are responsible for deallocating it when you is no longer need it.
+If you want to allocate the buffer yourself, see the documentation for information 
+on how to determine the minimum size that you must allocate.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/histogram_entries;   name=histogram_entries -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/histogram_entries"></a>
+<code>histogram_entries</code>
+</dt>
+<dd><p>The number of histogram entries, or bins, to be used in histograms for this operation</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/minVal;   name=minVal -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/minVal"></a>
+<code>minVal</code>
+</dt>
+<dd><p>A minimum pixel value. Any pixel value less than this will be clipped to this value
+(for the purposes of histogram calculation), and assigned to the first histogram entry.
+This minimum value is applied to each of the four channels separately.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/maxVal;   name=maxVal -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/maxVal"></a>
+<code>maxVal</code>
+</dt>
+<dd><p>A maximum pixel value. Any pixel value greater than this will be clipped to this value
+(for the purposes of histogram calculation), and assigned to the last histogram entry. 
+This maximum value is applied to each of the four channels separately.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_ARGBFFFF/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageGetTempBufferSize    If this is passed, then the size of a temp
+                                      buffer is returned from the left hand side
+                                      of the function and no other work is done.
+                                      An error may still be returned in this case.
+                                      All vImage errors are &lt; 0.  0 may also be
+                                      returned, indicating that the temp buffer
+                                      size is 0 for this set of parameters on
+                                      this device with this operating system at
+                                      this time of day. 
+
+          kvImageLeaveAlphaUnchanged  Copy the alpha channel to the destination image unchanged
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+ </p>
+<pre>
+   &gt;= 0                            Minimum temp buffer size, if kvImageGetTempBufferSize was specified.
+   kvImageNoError                  Success!
+   kvImageInvalidParameter         maxVal is less than minVal or histogram_entries is 0 
+   kvImageNullPointerArgument      src or dest pointer is NULL.
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match.
+ <pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageContrastStretch_ARGBFFFF;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+        For each channel:
+            Find minimum and maximum value of the input image: loVal, hiVal;
+            scale_factor = ( maxVal - minVal ) / (float) ( hiVal - loVal );
+            Transfer the image. For each pixel do:
+                dest[x] = (src[x] - loVal) * scale_factor + minVal;
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<p>All four channel histogram functions (i.e. those that support ARGB8888 or ARGBFFFF images)
+work equally well on four channel images with other channel orderings such as RGBA8888 or BGRAFFFF.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageContrastStretch_ARGBFFFF;name=end --><!-- end discussion -->
+</pre></pre>
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageContrastStretch_Planar8;   name=vImageContrastStretch_Planar8 --><a name="//apple_ref/c/func/vImageContrastStretch_Planar8"></a>
+<h3><a name="vImageContrastStretch_Planar8">vImageContrastStretch_Planar8</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageContrastStretch_Planar8;name=start --><!-- begin abstract --></p>
+<p>Stretches the contrast of a Planar8 source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageContrastStretch_Planar8;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageContrastStretch_Planar8;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageContrastStretch_Planar8" logicalPath="//apple_ref/c/instm/vImageContrastStretch_Planar8 //apple_ref/c/clm/vImageContrastStretch_Planar8 //apple_ref/c/intfcm/vImageContrastStretch_Planar8 //apple_ref/c/intfm/vImageContrastStretch_Planar8 //apple_ref/c/func/vImageContrastStretch_Planar8" target="_top"><span class="function">vImageContrastStretch_Planar8</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageContrastStretch_Planar8;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_Planar8/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_Planar8/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_Planar8/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_Planar8/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_Planar8/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_Planar8/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+   </p>
+<pre>
+          kvImageDoNotTile         Turns off internal multithreading. You may
+                                   wish to do this if you have your own
+                                   multithreading scheme to avoid having the
+                                   two interfere with one another.
+   </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+   </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match
+   kvImageNullPointerArgument      src or dest pointer is NULL.
+   </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageContrastStretch_Planar8;name=start --><p>This function performs the following operation:
+   </p>
+<pre>
+      Compute the histogram of the input image;
+      Generate LookUp table based on the histogram
+      Transform final image using the LUT. For each pixel, do the following:
+          dest[x] = LUT[src[x]];
+   </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<p>vImageEndsInContrastStretch_Planar8 or vImageTableLookUp_Planar8 may be used instead when more control
+over the stretch is desired.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageContrastStretch_Planar8;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageContrastStretch_PlanarF;   name=vImageContrastStretch_PlanarF --><a name="//apple_ref/c/func/vImageContrastStretch_PlanarF"></a>
+<h3><a name="vImageContrastStretch_PlanarF">vImageContrastStretch_PlanarF</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageContrastStretch_PlanarF;name=start --><!-- begin abstract --></p>
+<p>Stretches the contrast of a PlanarF source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageContrastStretch_PlanarF;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageContrastStretch_PlanarF;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageContrastStretch_PlanarF" logicalPath="//apple_ref/c/instm/vImageContrastStretch_PlanarF //apple_ref/c/clm/vImageContrastStretch_PlanarF //apple_ref/c/intfcm/vImageContrastStretch_PlanarF //apple_ref/c/intfm/vImageContrastStretch_PlanarF //apple_ref/c/func/vImageContrastStretch_PlanarF" target="_top"><span class="function">vImageContrastStretch_PlanarF</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">tempBuffer</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">histogram_entries</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">minVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">maxVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageContrastStretch_PlanarF;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/tempBuffer;   name=tempBuffer -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/tempBuffer"></a>
+<code>tempBuffer</code>
+</dt>
+<dd><p>A pointer to a temporary buffer. If you pass NULL, the function allocates the buffer,
+then deallocates it before returning. Alternatively, you can allocate the buffer yourself, 
+in which case you are responsible for deallocating it when you is no longer need it.
+If you want to allocate the buffer yourself, see the documentation for information 
+on how to determine the minimum size that you must allocate.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/histogram_entries;   name=histogram_entries -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/histogram_entries"></a>
+<code>histogram_entries</code>
+</dt>
+<dd><p>The number of histogram entries, or bins to be used in histograms for this operation</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/minVal;   name=minVal -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/minVal"></a>
+<code>minVal</code>
+</dt>
+<dd><p>A minimum pixel value. Any pixel value less than this will be
+clipped to this value (for the purposes of histogram calculation),
+and assigned to the first histogram entry.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/maxVal;   name=maxVal -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/maxVal"></a>
+<code>maxVal</code>
+</dt>
+<dd><p>A maximum pixel value. Any pixel value greater than this will
+be clipped to this value (for the purposes of histogram calculation),
+and assigned to the last histogram entry.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageContrastStretch_PlanarF/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageGetTempBufferSize    If this is passed, then the size of a temp
+                                      buffer is returned from the left hand side
+                                      of the function and no other work is done.
+                                      An error may still be returned in this case.
+                                      All vImage errors are &lt; 0.  0 may also be
+                                      returned, indicating that the temp buffer
+                                      size is 0 for this set of parameters on
+                                      this device with this operating system at
+                                      this time of day. 
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned
+ </p>
+<pre>
+   &gt;= 0                            Minimum temp buffer size, if kvImageGetTempBufferSize was specified.
+   kvImageNoError                  Success!
+   kvImageInvalidParameter         maxVal is less than minVal or histogram_entries is 0 
+   kvImageNullPointerArgument      src or dest pointer is NULL.
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match.
+   kvImageMemoryAllocationError    Can not allocate memory for the buffer.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageContrastStretch_PlanarF;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      Find minimum and maximum value of the input image: loVal, hiVal;
+      scale_factor = ( maxVal - minVal ) / (float) ( hiVal - loVal );
+      Transfer the image. For each pixel do:
+          dest[x] = (src[x] - loVal) * scale_factor + minVal;
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<p>vImageEndsInContrastStretch_PlanarF or vImageInterpolatedLookupTable_PlanarF may be used instead when more control
+over the stretch is desired.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageContrastStretch_PlanarF;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888;   name=vImageEndsInContrastStretch_ARGB8888 --><a name="//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888"></a>
+<h3><a name="vImageEndsInContrastStretch_ARGB8888">vImageEndsInContrastStretch_ARGB8888</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888;name=start --><!-- begin abstract --></p>
+<p>Performs an ends-in contrast stretch operation on an ARGB8888 source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888" logicalPath="//apple_ref/c/instm/vImageEndsInContrastStretch_ARGB8888 //apple_ref/c/clm/vImageEndsInContrastStretch_ARGB8888 //apple_ref/c/intfcm/vImageEndsInContrastStretch_ARGB8888 //apple_ref/c/intfm/vImageEndsInContrastStretch_ARGB8888 //apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888" target="_top"><span class="function">vImageEndsInContrastStretch_ARGB8888</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <span class="keyword">const</span> <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/percent_low" logicalPath="//apple_ref/c/cl/percent_low //apple_ref/c/tdef/percent_low //apple_ref/c/tag/percent_low //apple_ref/c/struct/percent_low //apple_ref/c/intf/percent_low //apple_ref/doc/anysymbol/percent_low" target="_top"><span class="type">percent_low</span></a>[<span class="number">4</span>], 
+    <span class="keyword">const</span> <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/percent_high" logicalPath="//apple_ref/c/cl/percent_high //apple_ref/c/tdef/percent_high //apple_ref/c/tag/percent_high //apple_ref/c/struct/percent_high //apple_ref/c/intf/percent_high //apple_ref/doc/anysymbol/percent_high" target="_top"><span class="type">percent_high</span></a>[<span class="number">4</span>], 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGB8888/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGB8888/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGB8888/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGB8888/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGB8888/percent_low;   name=percent_low -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGB8888/percent_low"></a>
+<code>percent_low</code>
+</dt>
+<dd><p>An array of four percentage values, one each for alpha, red, green, and blue.
+The number of pixels that map to the lowest end of the histogram of the
+transformed image should represent this percentage of the total pixels.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGB8888/percent_high;   name=percent_high -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGB8888/percent_high"></a>
+<code>percent_high</code>
+</dt>
+<dd><p>An array of four percentage values, one each for alpha, red, green, and blue.
+The number of pixels that map to the highest end of the histogram of the 
+transformed image should represent this percentage of the total pixels.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGB8888/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGB8888/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageLeaveAlphaUnchanged  Copy the alpha channel to the destination image unchanged
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match
+   kvImageNullPointerArgument      src, dest, percent_low or percent_high pointer is NULL.
+   kvImageInvalidParameter         Some of percent_low[i]+percent_high[i] is greater than 100.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      For each channel:
+          Compute the histogram of the input image;
+          Generate LookUp table based on the histogram and percentage parameters
+          Transform final image using the LookUp table. For each pixel, do the following:
+              dest[x] = LUT[src[x]];
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<p>All four channel histogram functions (i.e. those that support ARGB8888 or ARGBFFFF images)
+work equally well on four channel images with other channel orderings such as RGBA8888 or BGRAFFFF.
+The ordering of the percent_low and percent_high parameters match the order of the channels.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGB8888;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF;   name=vImageEndsInContrastStretch_ARGBFFFF --><a name="//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF"></a>
+<h3><a name="vImageEndsInContrastStretch_ARGBFFFF">vImageEndsInContrastStretch_ARGBFFFF</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF;name=start --><!-- begin abstract --></p>
+<p>Performs a histogram specification operation on an ARGBFFFF source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF" logicalPath="//apple_ref/c/instm/vImageEndsInContrastStretch_ARGBFFFF //apple_ref/c/clm/vImageEndsInContrastStretch_ARGBFFFF //apple_ref/c/intfcm/vImageEndsInContrastStretch_ARGBFFFF //apple_ref/c/intfm/vImageEndsInContrastStretch_ARGBFFFF //apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF" target="_top"><span class="function">vImageEndsInContrastStretch_ARGBFFFF</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">tempBuffer</span>, 
+    <span class="keyword">const</span> <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/percent_low" logicalPath="//apple_ref/c/cl/percent_low //apple_ref/c/tdef/percent_low //apple_ref/c/tag/percent_low //apple_ref/c/struct/percent_low //apple_ref/c/intf/percent_low //apple_ref/doc/anysymbol/percent_low" target="_top"><span class="type">percent_low</span></a>[<span class="number">4</span>], 
+    <span class="keyword">const</span> <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/percent_high" logicalPath="//apple_ref/c/cl/percent_high //apple_ref/c/tdef/percent_high //apple_ref/c/tag/percent_high //apple_ref/c/struct/percent_high //apple_ref/c/intf/percent_high //apple_ref/doc/anysymbol/percent_high" target="_top"><span class="type">percent_high</span></a>[<span class="number">4</span>], 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">histogram_entries</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">minVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">maxVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/tempBuffer;   name=tempBuffer -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/tempBuffer"></a>
+<code>tempBuffer</code>
+</dt>
+<dd><p>A pointer to a temporary buffer. If you pass NULL, the function allocates the buffer,
+then deallocates it before returning. Alternatively, you can allocate the buffer yourself, 
+in which case you are responsible for deallocating it when you is no longer need it.
+If you want to allocate the buffer yourself, see the documentation for information 
+on how to determine the minimum size that you must allocate.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/percent_low;   name=percent_low -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/percent_low"></a>
+<code>percent_low</code>
+</dt>
+<dd><p>An array of four percentage values, one each for alpha, red, green, and blue.
+The number of pixels that map to the lowest end of the histogram of the
+transformed image should represent this percentage of the total pixels.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/percent_high;   name=percent_high -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/percent_high"></a>
+<code>percent_high</code>
+</dt>
+<dd><p>An array of four percentage values, one each for alpha, red, green, and blue.
+The number of pixels that map to the highest end of the histogram of the 
+transformed image should represent this percentage of the total pixels.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/histogram_entries;   name=histogram_entries -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/histogram_entries"></a>
+<code>histogram_entries</code>
+</dt>
+<dd><p>The number of histogram entries, or bins, to be used in histograms for this operation</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/minVal;   name=minVal -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/minVal"></a>
+<code>minVal</code>
+</dt>
+<dd><p>A minimum pixel value. Any pixel value less than this will be clipped to this value
+(for the purposes of histogram calculation), and assigned to the first histogram entry.
+This minimum value is applied to each of the four channels separately.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/maxVal;   name=maxVal -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/maxVal"></a>
+<code>maxVal</code>
+</dt>
+<dd><p>A maximum pixel value. Any pixel value greater than this will be clipped to this value
+(for the purposes of histogram calculation), and assigned to the last histogram entry. 
+This maximum value is applied to each of the four channels separately.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_ARGBFFFF/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageGetTempBufferSize    If this is passed, then the size of a temp
+                                      buffer is returned from the left hand side
+                                      of the function and no other work is done.
+                                      An error may still be returned in this case.
+                                      All vImage errors are &lt; 0.  0 may also be
+                                      returned, indicating that the temp buffer
+                                      size is 0 for this set of parameters on
+                                      this device with this operating system at
+                                      this time of day. 
+
+          kvImageLeaveAlphaUnchanged  Copy the alpha channel to the destination image unchanged
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+ </p>
+<pre>
+   &gt;= 0                            Minimum temp buffer size, if kvImageGetTempBufferSize was specified.
+   kvImageNoError                  Success!
+   kvImageInvalidParameter         maxVal is less than minVal, histogram_entries is 0 or 
+                                   some of percent_low[i]+percent_high[i] is greater than 100.
+   kvImageNullPointerArgument      src, dest, percent_low or percent_high pointer is NULL.
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match.
+   kvImageMemoryAllocationError    Can not allocate memory for the buffer.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      For each channel do:
+          Compute the histogram of the input image;
+          Generate LookUp table based on the histogram and percentage parameters
+          Transform final image using the LookUp table. For each pixel, do the following:
+              val = histogram_entries * (src[x] - minVal) / ( maxVal - minVal );
+              i = clip val between 0 and histogram_entries-1
+              dest[x] = LUT[i];
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<p>All four channel histogram functions (i.e. those that support ARGB8888 or ARGBFFFF images)
+work equally well on four channel images with other channel orderings such as RGBA8888 or BGRAFFFF.
+The ordering of the percent_low and percent_high parameters match the order of the channels.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEndsInContrastStretch_ARGBFFFF;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageEndsInContrastStretch_Planar8;   name=vImageEndsInContrastStretch_Planar8 --><a name="//apple_ref/c/func/vImageEndsInContrastStretch_Planar8"></a>
+<h3><a name="vImageEndsInContrastStretch_Planar8">vImageEndsInContrastStretch_Planar8</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEndsInContrastStretch_Planar8;name=start --><!-- begin abstract --></p>
+<p>Performs an ends-in contrast stretch operation on a Planar8 source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEndsInContrastStretch_Planar8;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEndsInContrastStretch_Planar8;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_Planar8" logicalPath="//apple_ref/c/instm/vImageEndsInContrastStretch_Planar8 //apple_ref/c/clm/vImageEndsInContrastStretch_Planar8 //apple_ref/c/intfcm/vImageEndsInContrastStretch_Planar8 //apple_ref/c/intfm/vImageEndsInContrastStretch_Planar8 //apple_ref/c/func/vImageEndsInContrastStretch_Planar8" target="_top"><span class="function">vImageEndsInContrastStretch_Planar8</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">percent_low</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">percent_high</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEndsInContrastStretch_Planar8;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/percent_low;   name=percent_low -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/percent_low"></a>
+<code>percent_low</code>
+</dt>
+<dd><p>A percentage value.
+The number of pixels that map to the lowest end of the histogram of the
+transformed image should represent this percentage of the total pixels.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/percent_high;   name=percent_high -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/percent_high"></a>
+<code>percent_high</code>
+</dt>
+<dd><p>A percentage value.
+The number of pixels that map to the highest end of the histogram of the 
+transformed image should represent this percentage of the total pixels.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageEndsInContrastStretch_Planar8/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile         Turns off internal multithreading. You may
+                                   wish to do this if you have your own
+                                   multithreading scheme to avoid having the
+                                   two interfere with one another.
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match
+   kvImageNullPointerArgument      src or dest pointer is NULL.
+   kvImageInvalidParameter         percent_low + percent_high is greater than 100.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEndsInContrastStretch_Planar8;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      Compute the histogram of the input image;
+      Generate LookUp table based on the histogram and percentage parameters
+      Transform final image using the LookUp table. For each pixel, do the following:
+          dest[x] = LUT[src[x]];
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEndsInContrastStretch_Planar8;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF;   name=vImageEndsInContrastStretch_PlanarF --><a name="//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF"></a>
+<h3><a name="vImageEndsInContrastStretch_PlanarF">vImageEndsInContrastStretch_PlanarF</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF;name=start --><!-- begin abstract --></p>
+<p>Performs an ends-in contrast stretch operation on a PlanarF source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF" logicalPath="//apple_ref/c/instm/vImageEndsInContrastStretch_PlanarF //apple_ref/c/clm/vImageEndsInContrastStretch_PlanarF //apple_ref/c/intfcm/vImageEndsInContrastStretch_PlanarF //apple_ref/c/intfm/vImageEndsInContrastStretch_PlanarF //apple_ref/c/func/vImageEndsInContrastStretch_PlanarF" target="_top"><span class="function">vImageEndsInContrastStretch_PlanarF</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">tempBuffer</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">percent_low</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">percent_high</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">histogram_entries</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">minVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">maxVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+ * </p>
+<pre>
+ *   &gt;= 0                            Minimum temp buffer size, if kvImageGetTempBufferSize was specified.
+ *   kvImageNoError                  Success!
+ *   kvImageInvalidParameter         maxVal is less than minVal, histogram_entries is 0 or
+ *                                   percent_low + percent_high is greater than 100.
+ *   kvImageNullPointerArgument      src or dest pointer is NULL.
+ *   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match.
+ *   kvImageMemoryAllocationError    Can not allocate memory for the buffer.
+ *  </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF;name=start --><pre>
+ *      Compute the histogram of the input image;
+ *      Generate LookUp table based on the histogram and percentage parameters
+ *      Transform final image using the LookUp table. For each pixel, do the following:
+ *          val = histogram_entries * (src[x] - minVal) / ( maxVal - minVal );
+ *          i = clip val between 0 and histogram_entries-1
+ *          dest[x] = LUT[i];
+ *
+ * This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+ *    if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+ *    kvImageDoNotTile
+ *
+ * @param src           A pointer to a vImage_Buffer that references the source pixels
+ *
+ * @param dest          A pointer to a vImage buffer that references the destination pixels
+ *
+ * @param tempBuffer    A pointer to a temporary buffer. If you pass NULL, the function allocates the buffer,
+ *                      then deallocates it before returning. Alternatively, you can allocate the buffer yourself, 
+ *                      in which case you are responsible for deallocating it when you is no longer need it.
+ *                      If you want to allocate the buffer yourself, see the documentation for information 
+ *                      on how to determine the minimum size that you must allocate.
+ *
+ * @param percent_low   A percentage value.
+ *                      The number of pixels that map to the lowest end of the histogram of the
+ *                      transformed image should represent this percentage of the total pixels.
+ *    
+ * @param percent_high  A percentage value.
+ *                      The number of pixels that map to the highest end of the histogram of the 
+ *                      transformed image should represent this percentage of the total pixels.
+ *
+ * @param histogram_entries The number of histogram entries, or bins, to be used in histograms for this operation
+ *
+ * @param minVal        A minimum pixel value, the low end of the histogram.
+ *                      Any pixel value less than this will be clipped to this value
+ *                      (for the purposes of histogram calculation), and assigned to the first histogram entry.
+ *
+ * @param maxVal        A maximum pixel value, the high end of the histogram.
+ *                      Any pixel value greater than this will be clipped to this value 
+ *                      (for the purposes of histogram calculation), and assigned to the last histogram entry.
+ *
+ * @param    flags      The following flags are allowed:
+ * &lt;pre&gt;@textblock
+ *          kvImageDoNotTile            Turns off internal multithreading. You may
+ *                                      wish to do this if you have your own
+ *                                      multithreading scheme to avoid having the
+ *                                      two interfere with one another.
+ *
+ *          kvImageGetTempBufferSize    If this is passed, then the size of a temp
+ *                                      buffer is returned from the left hand side
+ *                                      of the function and no other work is done.
+ *                                      An error may still be returned in this case.
+ *                                      All vImage errors are &lt; 0.  0 may also be
+ *                                      returned, indicating that the temp buffer
+ *                                      size is 0 for this set of parameters on
+ *                                      this device with this operating system at
+ *                                      this time of day. 
+ * </pre>
+<p> *
+ * <!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEndsInContrastStretch_PlanarF;name=end --><!-- end discussion -->
+</p>
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageEqualization_ARGB8888;   name=vImageEqualization_ARGB8888 --><a name="//apple_ref/c/func/vImageEqualization_ARGB8888"></a>
+<h3><a name="vImageEqualization_ARGB8888">vImageEqualization_ARGB8888</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEqualization_ARGB8888;name=start --><!-- begin abstract --></p>
+<p>Equalizes the histogram of an ARGB8888 source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEqualization_ARGB8888;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEqualization_ARGB8888;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEqualization_ARGB8888" logicalPath="//apple_ref/c/instm/vImageEqualization_ARGB8888 //apple_ref/c/clm/vImageEqualization_ARGB8888 //apple_ref/c/intfcm/vImageEqualization_ARGB8888 //apple_ref/c/intfm/vImageEqualization_ARGB8888 //apple_ref/c/func/vImageEqualization_ARGB8888" target="_top"><span class="function">vImageEqualization_ARGB8888</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEqualization_ARGB8888;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_ARGB8888/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_ARGB8888/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_ARGB8888/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_ARGB8888/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_ARGB8888/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_ARGB8888/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageLeaveAlphaUnchanged  Copy the alpha channel to the destination image unchanged
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match
+   kvImageNullPointerArgument      src or dest pointer is NULL.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEqualization_ARGB8888;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      Calculates histograms for each channel of the ARGB8888 source image;
+      Calculate normalized sum of each histogram;
+      For each pixel do the following:
+          val = src[x];
+          For each channel:
+              val[ch] = equalized_histogram[ch][val[ch]];
+              dest[x] = val;
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<p>All four channel histogram functions (i.e. those that support ARGB8888 or ARGBFFFF images)
+work equally well on four channel images with other channel orderings such as RGBA8888 or BGRAFFFF.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEqualization_ARGB8888;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageEqualization_ARGBFFFF;   name=vImageEqualization_ARGBFFFF --><a name="//apple_ref/c/func/vImageEqualization_ARGBFFFF"></a>
+<h3><a name="vImageEqualization_ARGBFFFF">vImageEqualization_ARGBFFFF</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEqualization_ARGBFFFF;name=start --><!-- begin abstract --></p>
+<p>Equalizes the histogram of an ARGBFFFF source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEqualization_ARGBFFFF;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEqualization_ARGBFFFF;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEqualization_ARGBFFFF" logicalPath="//apple_ref/c/instm/vImageEqualization_ARGBFFFF //apple_ref/c/clm/vImageEqualization_ARGBFFFF //apple_ref/c/intfcm/vImageEqualization_ARGBFFFF //apple_ref/c/intfm/vImageEqualization_ARGBFFFF //apple_ref/c/func/vImageEqualization_ARGBFFFF" target="_top"><span class="function">vImageEqualization_ARGBFFFF</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">tempBuffer</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">histogram_entries</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">minVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">maxVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEqualization_ARGBFFFF;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/tempBuffer;   name=tempBuffer -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/tempBuffer"></a>
+<code>tempBuffer</code>
+</dt>
+<dd><p>A pointer to a temporary buffer. If you pass NULL, the function allocates the buffer,
+then deallocates it before returning. Alternatively, you can allocate the buffer yourself,
+in which case you are responsible for deallocating it when you is no longer need it.
+If you want to allocate the buffer yourself, see the documentation for information
+on how to determine the minimum size that you must allocate.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/histogram_entries;   name=histogram_entries -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/histogram_entries"></a>
+<code>histogram_entries</code>
+</dt>
+<dd><p>The number of histogram entries, or bins, to be used in histograms for this operation</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/minVal;   name=minVal -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/minVal"></a>
+<code>minVal</code>
+</dt>
+<dd><p>A minimum pixel value. Any pixel value less than this will be clipped to this value
+(for the purposes of histogram calculation), and assigned to the first histogram entry.
+This minimum value is applied to each of the four channels separately.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/maxVal;   name=maxVal -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/maxVal"></a>
+<code>maxVal</code>
+</dt>
+<dd><p>A maximum pixel value. Any pixel value greater than this will be clipped to this value
+(for the purposes of histogram calculation), and assigned to the last histogram entry.
+This maximum value is applied to each of the four channels separately.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_ARGBFFFF/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageGetTempBufferSize    If this is passed, then the size of a temp
+                                      buffer is returned from the left hand side
+                                      of the function and no other work is done.
+                                      An error may still be returned in this case.
+                                      All vImage errors are &lt; 0.  0 may also be
+                                      returned, indicating that the temp buffer
+                                      size is 0 for this set of parameters on
+                                      this device with this operating system at
+                                      this time of day. 
+
+          kvImageLeaveAlphaUnchanged    Copy the alpha channel to the destination image unchanged
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned
+ </p>
+<pre>
+   &gt;= 0                            Minimum temp buffer size, if kvImageGetTempBufferSize was specified.
+   kvImageNoError                  Success!
+   kvImageInvalidParameter         maxVal is less than minVal or histogram_entries is 0 
+   kvImageNullPointerArgument      src or dest pointer is NULL.
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match.
+   kvImageMemoryAllocationError    Can not allocate memory for the buffer.
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<p>All four channel histogram functions (i.e. those that support ARGB8888 or ARGBFFFF images)
+work equally well on four channel images with other channel orderings such as RGBA8888 or BGRAFFFF. 
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEqualization_ARGBFFFF;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      Compute the histogram of the input image:
+          For each pixel, do the following:
+              val = src[x];
+              For each channel do:
+                  i = histogram_entries * (val[ch] - minVal) / (maxVal - minVal);
+                  i = clip i between 0 and histogram_entries-1
+                  histogram[ch][i]++;
+
+      Calculate normalized sum of each histogram;
+
+      For each pixel, do the following:
+          val = src[x];
+          For each channel do:
+              i = histogram_entries * (val[ch] - minVal) / (maxVal - minVal);
+              i = clip i between 0 and histogram_entries-1
+              val[ch] = equalized_histogram[ch][i];
+          dest[x] = val;
+ </pre>
+
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEqualization_ARGBFFFF;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageEqualization_Planar8;   name=vImageEqualization_Planar8 --><a name="//apple_ref/c/func/vImageEqualization_Planar8"></a>
+<h3><a name="vImageEqualization_Planar8">vImageEqualization_Planar8</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEqualization_Planar8;name=start --><!-- begin abstract --></p>
+<p>Equalizes the histogram of a Planar8 source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEqualization_Planar8;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEqualization_Planar8;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEqualization_Planar8" logicalPath="//apple_ref/c/instm/vImageEqualization_Planar8 //apple_ref/c/clm/vImageEqualization_Planar8 //apple_ref/c/intfcm/vImageEqualization_Planar8 //apple_ref/c/intfm/vImageEqualization_Planar8 //apple_ref/c/func/vImageEqualization_Planar8" target="_top"><span class="function">vImageEqualization_Planar8</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEqualization_Planar8;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_Planar8/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_Planar8/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_Planar8/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_Planar8/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_Planar8/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_Planar8/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile         Turns off internal multithreading. You may
+                                   wish to do this if you have your own
+                                   multithreading scheme to avoid having the
+                                   two interfere with one another.
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match
+   kvImageNullPointerArgument      src or dest pointer is NULL.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEqualization_Planar8;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      Compute the histogram of the input image;
+      Calculate normalized sum of histogram;
+      For each pixel, do the following:
+          dest[x] = equalized_histogram[src[x]];
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEqualization_Planar8;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageEqualization_PlanarF;   name=vImageEqualization_PlanarF --><a name="//apple_ref/c/func/vImageEqualization_PlanarF"></a>
+<h3><a name="vImageEqualization_PlanarF">vImageEqualization_PlanarF</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEqualization_PlanarF;name=start --><!-- begin abstract --></p>
+<p>Equalizes the histogram of a PlanarF source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageEqualization_PlanarF;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEqualization_PlanarF;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageEqualization_PlanarF" logicalPath="//apple_ref/c/instm/vImageEqualization_PlanarF //apple_ref/c/clm/vImageEqualization_PlanarF //apple_ref/c/intfcm/vImageEqualization_PlanarF //apple_ref/c/intfm/vImageEqualization_PlanarF //apple_ref/c/func/vImageEqualization_PlanarF" target="_top"><span class="function">vImageEqualization_PlanarF</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">tempBuffer</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">histogram_entries</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">minVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">maxVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageEqualization_PlanarF;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_PlanarF/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_PlanarF/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_PlanarF/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_PlanarF/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_PlanarF/tempBuffer;   name=tempBuffer -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_PlanarF/tempBuffer"></a>
+<code>tempBuffer</code>
+</dt>
+<dd><p>A pointer to a temporary buffer. If you pass NULL, the function allocates the buffer,
+then deallocates it before returning. Alternatively, you can allocate the buffer yourself,
+in which case you are responsible for deallocating it when you is no longer need it.
+If you want to allocate the buffer yourself, see the documentation for information
+on how to determine the minimum size that you must allocate.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_PlanarF/histogram_entries;   name=histogram_entries -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_PlanarF/histogram_entries"></a>
+<code>histogram_entries</code>
+</dt>
+<dd><p>The number of histogram entries, or bins.
+The histogram will be an array with histogram_entries elements.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_PlanarF/minVal;   name=minVal -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_PlanarF/minVal"></a>
+<code>minVal</code>
+</dt>
+<dd><p>A minimum pixel value. Any pixel value less than this will be
+clipped to this value (for the purposes of histogram calculation),
+and assigned to the first histogram entry.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_PlanarF/maxVal;   name=maxVal -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_PlanarF/maxVal"></a>
+<code>maxVal</code>
+</dt>
+<dd><p>A maximum pixel value. Any pixel value greater than this will
+be clipped to this value (for the purposes of histogram calculation),
+and assigned to the last histogram entry.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageEqualization_PlanarF/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageEqualization_PlanarF/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageGetTempBufferSize    If this is passed, then the size of a temp
+                                      buffer is returned from the left hand side
+                                      of the function and no other work is done.
+                                      An error may still be returned in this case.
+                                      All vImage errors are &lt; 0.  0 may also be
+                                      returned, indicating that the temp buffer
+                                      size is 0 for this set of parameters on
+                                      this device with this operating system at
+                                      this time of day.
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following values may be returned:
+ </p>
+<pre>
+   &gt;= 0                            Minimum temp buffer size, if kvImageGetTempBufferSize was specified.
+   kvImageNoError                  Success!
+   kvImageInvalidParameter         maxVal is less than minVal or histogram_entries is 0 
+   kvImageNullPointerArgument      src or histogram pointer is NULL.
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match.
+   kvImageMemoryAllocationError    Can not allocate memory for the buffer.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEqualization_PlanarF;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      Compute the histogram of the input image:
+          For each pixel, do the following:
+              val = histogram_entries * (src[x] - minVal) / (maxVal - minVal);
+              i = clip val between 0 and histogram_entries-1
+              histogram[i]++;
+      Calculate normalized sum of histogram;
+      For each pixel, do the following:
+          val = histogram_entries * (src[x] - minVal) / (maxVal - minVal);
+          i = clip val between 0 and histogram_entries-1
+          dest[x] = equalized_histogram[i];
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageEqualization_PlanarF;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageHistogramCalculation_ARGB8888;   name=vImageHistogramCalculation_ARGB8888 --><a name="//apple_ref/c/func/vImageHistogramCalculation_ARGB8888"></a>
+<h3><a name="vImageHistogramCalculation_ARGB8888">vImageHistogramCalculation_ARGB8888</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGB8888;name=start --><!-- begin abstract --></p>
+<p>Calculates histograms for each channel of an ARGB8888 image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGB8888;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGB8888;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramCalculation_ARGB8888" logicalPath="//apple_ref/c/instm/vImageHistogramCalculation_ARGB8888 //apple_ref/c/clm/vImageHistogramCalculation_ARGB8888 //apple_ref/c/intfcm/vImageHistogramCalculation_ARGB8888 //apple_ref/c/intfm/vImageHistogramCalculation_ARGB8888 //apple_ref/c/func/vImageHistogramCalculation_ARGB8888" target="_top"><span class="function">vImageHistogramCalculation_ARGB8888</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImagePixelCount" logicalPath="//apple_ref/c/cl/vImagePixelCount //apple_ref/c/tdef/vImagePixelCount" target="_top"><span class="type">vImagePixelCount</span></a> <span class="type">*</span><a machinegenerated="true" href="index.html#//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/histogram" logicalPath="//apple_ref/c/cl/histogram //apple_ref/c/tdef/histogram //apple_ref/c/tag/histogram //apple_ref/c/struct/histogram //apple_ref/c/intf/histogram //apple_ref/doc/anysymbol/histogram" target="_top"><span class="type">histogram</span></a>[<span class="number">4</span>], 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGB8888;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGB8888/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGB8888/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGB8888/histogram;   name=histogram -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGB8888/histogram"></a>
+<code>histogram</code>
+</dt>
+<dd><p>A pointer to a histograms, one each for alpha, red, green, and blue (in that order).
+On return, this array will contain the four histograms for the corresponding channels.
+Each of the four histograms will be an array with 256 elements.
+This function does not allocate storage for the histograms. You must allocate
+storage for each of the four histograms, create an array and populate it with
+pointers to the histograms before calling the function.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGB8888/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGB8888/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageLeaveAlphaUnchanged  Do not calculate the histogram for the alpha channel
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may occur
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageNullPointerArgument      src or histogram pointer is NULL.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGB8888;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+
+      For each pixel and channel, do the following:
+          val = src[x];
+          histogram[ch][val[ch]]++;
+
+ </pre>
+
+<p>This routine will not work in place
+</p>
+<p>All four channel histogram functions (i.e. those that support ARGB8888 or ARGBFFFF images)
+work equally well on four channel images with other channel orderings such as RGBA8888 or BGRAFFFF.
+The ordering of the histogram will match the channel order of the image.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGB8888;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF;   name=vImageHistogramCalculation_ARGBFFFF --><a name="//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF"></a>
+<h3><a name="vImageHistogramCalculation_ARGBFFFF">vImageHistogramCalculation_ARGBFFFF</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF;name=start --><!-- begin abstract --></p>
+<p>Calculates histograms for each channel of an ARGBFFFF image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF" logicalPath="//apple_ref/c/instm/vImageHistogramCalculation_ARGBFFFF //apple_ref/c/clm/vImageHistogramCalculation_ARGBFFFF //apple_ref/c/intfcm/vImageHistogramCalculation_ARGBFFFF //apple_ref/c/intfm/vImageHistogramCalculation_ARGBFFFF //apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF" target="_top"><span class="function">vImageHistogramCalculation_ARGBFFFF</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImagePixelCount" logicalPath="//apple_ref/c/cl/vImagePixelCount //apple_ref/c/tdef/vImagePixelCount" target="_top"><span class="type">vImagePixelCount</span></a> <span class="type">*</span><a machinegenerated="true" href="index.html#//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/histogram" logicalPath="//apple_ref/c/cl/histogram //apple_ref/c/tdef/histogram //apple_ref/c/tag/histogram //apple_ref/c/struct/histogram //apple_ref/c/intf/histogram //apple_ref/doc/anysymbol/histogram" target="_top"><span class="type">histogram</span></a>[<span class="number">4</span>], 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">histogram_entries</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">minVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">maxVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/histogram;   name=histogram -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/histogram"></a>
+<code>histogram</code>
+</dt>
+<dd><p>A pointer to an array of four histograms,
+one each for alpha, red, green, and blue (in that order).
+On return, this array will contain the four histograms for the corresponding channels.
+Each of the four histograms will be an array with histogram_entries elements.
+This function does not allocate storage for the histograms. You must allocate
+storage for each of the four histograms, create an array and populate it with
+pointers to the histograms before calling the function.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/histogram_entries;   name=histogram_entries -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/histogram_entries"></a>
+<code>histogram_entries</code>
+</dt>
+<dd><p>The number of histogram entries, or bins. Each of the four
+calculated histograms will be an array with histogram_entries elements.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/minVal;   name=minVal -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/minVal"></a>
+<code>minVal</code>
+</dt>
+<dd><p>A minimum pixel value. Any pixel value less than this will be clipped to this value
+(for the purposes of histogram calculation), and assigned to the first histogram entry.
+This minimum value is applied to each of the four channels separately.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/maxVal;   name=maxVal -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/maxVal"></a>
+<code>maxVal</code>
+</dt>
+<dd><p>A maximum pixel value. Any pixel value greater than this will be clipped to this value
+(for the purposes of histogram calculation), and assigned to the last histogram entry.
+This maximum value is applied to each of the four channels separately.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_ARGBFFFF/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageLeaveAlphaUnchanged  Do not calculate the histogram for the alpha channel
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageInvalidParameter         maxVal is less than minVal or histogram_entries is 0 
+   kvImageNullPointerArgument      src or any of the histogram pointers is NULL.
+ </pre>
+
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      For each pixel, do the following:
+          val = src[x];
+          For each channel do:
+              i = histogram_entries * (val[ch] - minVal) / (maxVal - minVal);
+              i = clip i between 0 and histogram_entries-1
+              histogram[ch][i]++;
+ </pre>
+
+<p>This routine will not work in place
+</p>
+<p>All four channel histogram functions (i.e. those that support ARGB8888 or ARGBFFFF images)
+work equally well on four channel images with other channel orderings such as RGBA8888 or BGRAFFFF.
+The ordering of the histogram will match the channel order of the image.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramCalculation_ARGBFFFF;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageHistogramCalculation_Planar8;   name=vImageHistogramCalculation_Planar8 --><a name="//apple_ref/c/func/vImageHistogramCalculation_Planar8"></a>
+<h3><a name="vImageHistogramCalculation_Planar8">vImageHistogramCalculation_Planar8</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramCalculation_Planar8;name=start --><!-- begin abstract --></p>
+<p>Calculates a histogram for a Planar8 image.
+</p>
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramCalculation_Planar8;name=end -->
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramCalculation_Planar8;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramCalculation_Planar8" logicalPath="//apple_ref/c/instm/vImageHistogramCalculation_Planar8 //apple_ref/c/clm/vImageHistogramCalculation_Planar8 //apple_ref/c/intfcm/vImageHistogramCalculation_Planar8 //apple_ref/c/intfm/vImageHistogramCalculation_Planar8 //apple_ref/c/func/vImageHistogramCalculation_Planar8" target="_top"><span class="function">vImageHistogramCalculation_Planar8</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImagePixelCount" logicalPath="//apple_ref/c/cl/vImagePixelCount //apple_ref/c/tdef/vImagePixelCount" target="_top"><span class="type">vImagePixelCount</span></a> <span class="type">*</span><span class="param">histogram</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramCalculation_Planar8;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_Planar8/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_Planar8/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_Planar8/histogram;   name=histogram -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_Planar8/histogram"></a>
+<code>histogram</code>
+</dt>
+<dd><p>A pointer to a histogram. On return, this array will
+contain the histogram for the source image.
+The histogram will be an array with 256 elements.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_Planar8/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_Planar8/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile         Turns off internal multithreading. You may
+                                   wish to do this if you have your own
+                                   multithreading scheme to avoid having the
+                                   two interfere with one another.
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageNullPointerArgument      src or histogram pointer is NULL.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramCalculation_Planar8;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      For each pixel, do the following:
+          histogram[src[x]]++;
+ </pre>
+
+<p>This routine will not work in place
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramCalculation_Planar8;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageHistogramCalculation_PlanarF;   name=vImageHistogramCalculation_PlanarF --><a name="//apple_ref/c/func/vImageHistogramCalculation_PlanarF"></a>
+<h3><a name="vImageHistogramCalculation_PlanarF">vImageHistogramCalculation_PlanarF</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramCalculation_PlanarF;name=start --><!-- begin abstract --></p>
+<p>Calculates a histogram for a PlanarF image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramCalculation_PlanarF;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramCalculation_PlanarF;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramCalculation_PlanarF" logicalPath="//apple_ref/c/instm/vImageHistogramCalculation_PlanarF //apple_ref/c/clm/vImageHistogramCalculation_PlanarF //apple_ref/c/intfcm/vImageHistogramCalculation_PlanarF //apple_ref/c/intfm/vImageHistogramCalculation_PlanarF //apple_ref/c/func/vImageHistogramCalculation_PlanarF" target="_top"><span class="function">vImageHistogramCalculation_PlanarF</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImagePixelCount" logicalPath="//apple_ref/c/cl/vImagePixelCount //apple_ref/c/tdef/vImagePixelCount" target="_top"><span class="type">vImagePixelCount</span></a> <span class="type">*</span><span class="param">histogram</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">histogram_entries</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">minVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">maxVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramCalculation_PlanarF;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/histogram;   name=histogram -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/histogram"></a>
+<code>histogram</code>
+</dt>
+<dd><p>A pointer to a histogram. On return, this array will
+contain the histogram for the source image.
+The histogram will have histogram_entries elements.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/histogram_entries;   name=histogram_entries -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/histogram_entries"></a>
+<code>histogram_entries</code>
+</dt>
+<dd><p>The number of histogram entries, or bins.
+The histogram will be an array with histogram_entries elements.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/minVal;   name=minVal -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/minVal"></a>
+<code>minVal</code>
+</dt>
+<dd><p>A minimum pixel value. Any pixel value less than this will be
+clipped to this value (for the purposes of histogram calculation),
+and assigned to the first histogram entry. src is not modified.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/maxVal;   name=maxVal -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/maxVal"></a>
+<code>maxVal</code>
+</dt>
+<dd><p>A maximum pixel value. Any pixel value greater than this will
+be clipped to this value (for the purposes of histogram calculation),
+and assigned to the last histogram entry.  src is not modified.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramCalculation_PlanarF/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile         Turns off internal multithreading. You may
+                                   wish to do this if you have your own
+                                   multithreading scheme to avoid having the
+                                   two interfere with one another.
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may occur:
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageInvalidParameter         maxVal is less than minVal or histogram_entries is 0 
+   kvImageNullPointerArgument      src or histogram pointer is NULL.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramCalculation_PlanarF;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      For each pixel, do the following:
+          val = histogram_entries * (src[x] - minVal) / (maxVal - minVal);
+          i = clip val between 0 and histogram_entries-1
+          histogram[i]++;
+ </pre>
+
+<p>This routine will not work in place
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramCalculation_PlanarF;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageHistogramSpecification_ARGB8888;   name=vImageHistogramSpecification_ARGB8888 --><a name="//apple_ref/c/func/vImageHistogramSpecification_ARGB8888"></a>
+<h3><a name="vImageHistogramSpecification_ARGB8888">vImageHistogramSpecification_ARGB8888</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGB8888;name=start --><!-- begin abstract --></p>
+<p>Performs a histogram specification operation on an ARGB8888 source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGB8888;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGB8888;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramSpecification_ARGB8888" logicalPath="//apple_ref/c/instm/vImageHistogramSpecification_ARGB8888 //apple_ref/c/clm/vImageHistogramSpecification_ARGB8888 //apple_ref/c/intfcm/vImageHistogramSpecification_ARGB8888 //apple_ref/c/intfm/vImageHistogramSpecification_ARGB8888 //apple_ref/c/func/vImageHistogramSpecification_ARGB8888" target="_top"><span class="function">vImageHistogramSpecification_ARGB8888</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImagePixelCount" logicalPath="//apple_ref/c/cl/vImagePixelCount //apple_ref/c/tdef/vImagePixelCount" target="_top"><span class="type">vImagePixelCount</span></a> <span class="type">*</span><a machinegenerated="true" href="index.html#//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/desired_histogram" logicalPath="//apple_ref/c/cl/desired_histogram //apple_ref/c/tdef/desired_histogram //apple_ref/c/tag/desired_histogram //apple_ref/c/struct/desired_histogram //apple_ref/c/intf/desired_histogram //apple_ref/doc/anysymbol/desired_histogram" target="_top"><span class="type">desired_histogram</span></a>[<span class="number">4</span>], 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGB8888;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGB8888/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGB8888/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGB8888/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGB8888/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGB8888/desired_histogram;   name=desired_histogram -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGB8888/desired_histogram"></a>
+<code>desired_histogram</code>
+</dt>
+<dd><p>A pointer to an array of four histograms, one each for
+alpha, red, green, and blue (in that order).
+These are the desired histograms for the transformed image.
+Each histogram should be an array with 256 elements.
+This function does not allocate storage for the histograms. You must allocate
+storage for each of the four histograms, create an array and populate it with
+pointers to the histograms before calling the function. The contents of the 
+histograms are generally obtained from vImageHistogramCalculation_&lt;fmt&gt; from
+another image, but need not be so.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGB8888/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGB8888/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageLeaveAlphaUnchanged  Copy the alpha channel to the destination image unchanged
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following values may be returned:
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match
+   kvImageNullPointerArgument      src, dest or any of the desired_histogram pointers is NULL.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGB8888;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      For each channel:
+          Compute the histogram of the input image;
+          Calculate normalized sum of the input histogram and the desired_histogram
+          Generate the inverse transform
+          Transform final image using inv_hist as a LUT. For each pixel, do the following:
+              dest[x] = inv_histogram[src[x]];
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<p>All four channel histogram functions (i.e. those that support ARGB8888 or ARGBFFFF images)
+work equally well on four channel images with other channel orderings such as RGBA8888 or BGRAFFFF.
+The ordering of the desired_histogram must match the channel order of the image.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGB8888;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF;   name=vImageHistogramSpecification_ARGBFFFF --><a name="//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF"></a>
+<h3><a name="vImageHistogramSpecification_ARGBFFFF">vImageHistogramSpecification_ARGBFFFF</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF;name=start --><!-- begin abstract --></p>
+<p>Performs a histogram specification operation on an ARGBFFFF source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF" logicalPath="//apple_ref/c/instm/vImageHistogramSpecification_ARGBFFFF //apple_ref/c/clm/vImageHistogramSpecification_ARGBFFFF //apple_ref/c/intfcm/vImageHistogramSpecification_ARGBFFFF //apple_ref/c/intfm/vImageHistogramSpecification_ARGBFFFF //apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF" target="_top"><span class="function">vImageHistogramSpecification_ARGBFFFF</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">tempBuffer</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImagePixelCount" logicalPath="//apple_ref/c/cl/vImagePixelCount //apple_ref/c/tdef/vImagePixelCount" target="_top"><span class="type">vImagePixelCount</span></a> <span class="type">*</span><a machinegenerated="true" href="index.html#//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/desired_histogram" logicalPath="//apple_ref/c/cl/desired_histogram //apple_ref/c/tdef/desired_histogram //apple_ref/c/tag/desired_histogram //apple_ref/c/struct/desired_histogram //apple_ref/c/intf/desired_histogram //apple_ref/doc/anysymbol/desired_histogram" target="_top"><span class="type">desired_histogram</span></a>[<span class="number">4</span>], 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">histogram_entries</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">minVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">maxVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/tempBuffer;   name=tempBuffer -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/tempBuffer"></a>
+<code>tempBuffer</code>
+</dt>
+<dd><p>A pointer to a temporary buffer. If you pass NULL, the function allocates the buffer,
+then deallocates it before returning. Alternatively, you can allocate the buffer yourself, 
+in which case you are responsible for deallocating it when you is no longer need it.
+If you want to allocate the buffer yourself, see the documentation for information 
+on how to determine the minimum size that you must allocate.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/desired_histogram;   name=desired_histogram -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/desired_histogram"></a>
+<code>desired_histogram</code>
+</dt>
+<dd><p>A pointer to an array of four histograms, one each for
+alpha, red, green, and blue (in that order).                
+These are the desired histograms for the transformed image.
+Each histogram should be an array with histogram_entries elements..
+This function does not allocate storage for the histograms. You must allocate
+storage for each of the four histograms, create an array and populate it with
+pointers to the histograms before calling the function. The contents of the
+histograms are generally obtained from vImageHistogramCalculation_&lt;fmt&gt; from
+another image, but need not be so.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/histogram_entries;   name=histogram_entries -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/histogram_entries"></a>
+<code>histogram_entries</code>
+</dt>
+<dd><p>The number of histogram entries, or bins, to be used in histograms for this operation</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/minVal;   name=minVal -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/minVal"></a>
+<code>minVal</code>
+</dt>
+<dd><p>A minimum pixel value. Any pixel value less than this will be clipped to this value
+(for the purposes of histogram calculation), and assigned to the first histogram entry.
+This minimum value is applied to each of the four channels separately.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/maxVal;   name=maxVal -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/maxVal"></a>
+<code>maxVal</code>
+</dt>
+<dd><p>A maximum pixel value. Any pixel value greater than this will be clipped to this value
+(for the purposes of histogram calculation), and assigned to the last histogram entry. 
+This maximum value is applied to each of the four channels separately.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_ARGBFFFF/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageGetTempBufferSize    If this is passed, then the size of a temp
+                                      buffer is returned from the left hand side
+                                      of the function and no other work is done.
+                                      An error may still be returned in this case.
+                                      All vImage errors are &lt; 0.  0 may also be
+                                      returned, indicating that the temp buffer
+                                      size is 0 for this set of parameters on
+                                      this device with this operating system at
+                                      this time of day. 
+
+          kvImageLeaveAlphaUnchanged  Copy the alpha channel to the destination image unchanged
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+ </p>
+<pre>
+   &gt;= 0                            Minimum temp buffer size, if kvImageGetTempBufferSize was specified.
+   kvImageNoError                  Success!
+   kvImageInvalidParameter         maxVal is less than minVal or histogram_entries is 0 
+   kvImageNullPointerArgument      src, dest or any of desired_histogram pointers is NULL.
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match.
+   kvImageMemoryAllocationError    Can not allocate memory for the buffer.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      For each channel do:
+          Compute the histogram of the input image:
+              For each pixel, do the following:
+                  val = histogram_entries * (src[x] - minVal) / (maxVal - minVal);
+                  i = clip val between 0 and histogram_entries-1
+                  histogram[ch][i]++;
+          Calculate normalized sum of the input histogram and the desired_histogram
+          Generate the inverse transform
+          Transform final image using inverse transform as a LUT. For each pixel, do the following:
+              val = histogram_entries * (src[ch][x] - minVal) / (maxVal - minVal);
+              i = clip val between 0 and histogram_entries-1
+              dest[ch][x] = inv_histogram[ch][i];
+  </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<p>All four channel histogram functions (i.e. those that support ARGB8888 or ARGBFFFF images)
+work equally well on four channel images with other channel orderings such as RGBA8888 or BGRAFFFF.
+The ordering of the desired_histogram must match the channel order of the image.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramSpecification_ARGBFFFF;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageHistogramSpecification_Planar8;   name=vImageHistogramSpecification_Planar8 --><a name="//apple_ref/c/func/vImageHistogramSpecification_Planar8"></a>
+<h3><a name="vImageHistogramSpecification_Planar8">vImageHistogramSpecification_Planar8</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramSpecification_Planar8;name=start --><!-- begin abstract --></p>
+<p>Performs a histogram specification operation on a Planar8 source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramSpecification_Planar8;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramSpecification_Planar8;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramSpecification_Planar8" logicalPath="//apple_ref/c/instm/vImageHistogramSpecification_Planar8 //apple_ref/c/clm/vImageHistogramSpecification_Planar8 //apple_ref/c/intfcm/vImageHistogramSpecification_Planar8 //apple_ref/c/intfm/vImageHistogramSpecification_Planar8 //apple_ref/c/func/vImageHistogramSpecification_Planar8" target="_top"><span class="function">vImageHistogramSpecification_Planar8</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImagePixelCount" logicalPath="//apple_ref/c/cl/vImagePixelCount //apple_ref/c/tdef/vImagePixelCount" target="_top"><span class="type">vImagePixelCount</span></a> <span class="type">*</span><span class="param">desired_histogram</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramSpecification_Planar8;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_Planar8/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_Planar8/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_Planar8/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_Planar8/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_Planar8/desired_histogram;   name=desired_histogram -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_Planar8/desired_histogram"></a>
+<code>desired_histogram</code>
+</dt>
+<dd><p>A pointer to the desired histogram for the transformed image.
+The histogram should be an array with 256 elements.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_Planar8/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_Planar8/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile         Turns off internal multithreading. You may
+                                   wish to do this if you have your own
+                                   multithreading scheme to avoid having the
+                                   two interfere with one another.
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may occur:
+ </p>
+<pre>
+   kvImageNoError                  Success!
+   kvImageBufferSizeMismatch       sizes of the src and dest images do not match
+   kvImageNullPointerArgument      src, dest or desired_histogram pointer is NULL.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramSpecification_Planar8;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      Compute the histogram of the input image;
+      Calculate normalized sum of the input histogram and the desired_histogram
+      Generate the inverse transform
+      Transform final image using inv_hist as a LUT. For each pixel, do the following:
+          dest[x] = inv_histogram[src[x]];
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramSpecification_Planar8;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageHistogramSpecification_PlanarF;   name=vImageHistogramSpecification_PlanarF --><a name="//apple_ref/c/func/vImageHistogramSpecification_PlanarF"></a>
+<h3><a name="vImageHistogramSpecification_PlanarF">vImageHistogramSpecification_PlanarF</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramSpecification_PlanarF;name=start --><!-- begin abstract --></p>
+<p>Performs a histogram specification operation on a PlanarF source image.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageHistogramSpecification_PlanarF;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramSpecification_PlanarF;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageHistogramSpecification_PlanarF" logicalPath="//apple_ref/c/instm/vImageHistogramSpecification_PlanarF //apple_ref/c/clm/vImageHistogramSpecification_PlanarF //apple_ref/c/intfcm/vImageHistogramSpecification_PlanarF //apple_ref/c/intfm/vImageHistogramSpecification_PlanarF //apple_ref/c/func/vImageHistogramSpecification_PlanarF" target="_top"><span class="function">vImageHistogramSpecification_PlanarF</span></a>( 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">src</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dest</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">tempBuffer</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImagePixelCount" logicalPath="//apple_ref/c/cl/vImagePixelCount //apple_ref/c/tdef/vImagePixelCount" target="_top"><span class="type">vImagePixelCount</span></a> <span class="type">*</span><span class="param">desired_histogram</span>, 
+    <span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">histogram_entries</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">minVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/Pixel_F" logicalPath="//apple_ref/c/cl/Pixel_F //apple_ref/c/tdef/Pixel_F" target="_top"><span class="type">Pixel_F</span></a> <span class="param">maxVal</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageHistogramSpecification_PlanarF;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/src;   name=src -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/src"></a>
+<code>src</code>
+</dt>
+<dd><p>A pointer to a vImage_Buffer that references the source pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/dest;   name=dest -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/dest"></a>
+<code>dest</code>
+</dt>
+<dd><p>A pointer to a vImage buffer that references the destination pixels</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/tempBuffer;   name=tempBuffer -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/tempBuffer"></a>
+<code>tempBuffer</code>
+</dt>
+<dd><p>A pointer to a temporary buffer. If you pass NULL, the function allocates the buffer,
+then deallocates it before returning. Alternatively, you can allocate the buffer yourself,
+in which case you are responsible for deallocating it when you is no longer need it.
+If you want to allocate the buffer yourself, see the documentation for information
+on how to determine the minimum size that you must allocate.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/desired_histogram;   name=desired_histogram -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/desired_histogram"></a>
+<code>desired_histogram</code>
+</dt>
+<dd><p>A pointer the desired histogram for the transformed image.
+The histogram should be an array with histogram_entries elements.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/histogram_entries;   name=histogram_entries -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/histogram_entries"></a>
+<code>histogram_entries</code>
+</dt>
+<dd><p>The number of histogram entries, or bins, to be used in histograms for this operation</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/minVal;   name=minVal -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/minVal"></a>
+<code>minVal</code>
+</dt>
+<dd><p>A minimum pixel value. Any pixel value less than this will be
+clipped to this value (for the purposes of histogram calculation),
+and assigned to the first histogram entry.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/maxVal;   name=maxVal -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/maxVal"></a>
+<code>maxVal</code>
+</dt>
+<dd><p>A maximum pixel value. Any pixel value greater than this will
+be clipped to this value (for the purposes of histogram calculation),
+and assigned to the last histogram entry.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageHistogramSpecification_PlanarF/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+ </p>
+<pre>
+          kvImageDoNotTile            Turns off internal multithreading. You may
+                                      wish to do this if you have your own
+                                      multithreading scheme to avoid having the
+                                      two interfere with one another.
+
+          kvImageGetTempBufferSize    If this is passed, then the size of a temp
+                                      buffer is returned from the left hand side
+                                      of the function and no other work is done.
+                                      An error may still be returned in this case.
+                                      All vImage errors are &lt; 0.  0 may also be
+                                      returned, indicating that the temp buffer
+                                      size is 0 for this set of parameters on
+                                      this device with this operating system at
+                                      this time of day. 
+ </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+ </p>
+<pre>
+   &gt;= 0                            Minimum temp buffer size, if kvImageGetTempBufferSize was specified.
+   kvImageNoError                  Success!
+   kvImageInvalidParameter         maxVal is less than minVal or histogram_entries is 0 
+   kvImageNullPointerArgument      src, dest or desired_histogram pointer is NULL.
+   kvImageBufferSizeMismatch       Sizes of the src and dest images do not match.
+   kvImageMemoryAllocationError    Can not allocate memory for the buffer.
+ </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramSpecification_PlanarF;name=start --><p>This function performs the following operation:
+ </p>
+<pre>
+      Compute the histogram of the input image:
+          For each pixel, do the following:
+              val = histogram_entries * (src[x] - minVal) / (maxVal - minVal);
+              i = clip val between 0 and histogram_entries-1
+              histogram[i]++;
+      Calculate normalized sum of the input histogram and the desired_histogram
+      Generate the inverse transform
+      Transform final image using inverse transform as a LUT. For each pixel, do the following:
+          val = histogram_entries * (src[x] - minVal) / (maxVal - minVal);
+          i = clip val between 0 and histogram_entries-1
+          dest[x] = inv_histogram[i];
+ </pre>
+
+<p>This routine will work in place provided that src.data == dest.data and src.rowBytes &gt;= dest.rowBytes.
+if src.rowBytes &gt; dest.rowBytes and src.data == dest.data, the function will only work if you pass
+kvImageDoNotTile
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageHistogramSpecification_PlanarF;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.3. Available in iOS v5.0.</dd>
+</dl>
+<p class="gapBeforeFooter">&nbsp;</p>
+<hr class="afterFooter">
+<div class="hd_copyright_and_timestamp">
+<p class="hd_copyright">&copy; Copyright (c) 2003-2015 by Apple Inc. All rights reserved.
+
+ </p>
+<p class="hd_timestamp">Last Updated: Thursday, December 24, 2015
+</p>
+</div>
+</td>
+</tr></table>
+</body>
+</html>

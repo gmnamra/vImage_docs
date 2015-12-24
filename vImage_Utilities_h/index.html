@@ -1,0 +1,2152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>vImage_Utilities.h</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+<style><!--
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:link {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:active {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:visited:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }
+#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<style id="disable_before_iOS_5"><!--
+#tocMenu {
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+}
+#bodyContents {
+		width: auto;
+		left: 235px;
+		right: 0;
+		padding-left: 15px;
+		position: fixed;
+		height: 100%;
+		overflow-y: scroll;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))) {
+        if (navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)) {
+                /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+                var del_style_elt = document.getElementById("disable_before_iOS_5");
+                if (del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+// --></script><script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script><style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+<!-- headerDoc=Header;  uid=//apple_ref/doc/header/vImage_Utilities.h;   name=vImage_Utilities.h -->
+<a name="//apple_ref/doc/header/vImage_Utilities.h"></a>
+<table id="hd_outermost_table" height="100%" width="100%"><tr>
+<td valign="top" id="tocMenu" src="toc.html"></td>
+<td id="bodyContents" valign="top">
+<a name="top"></a>
+<h1><a name="vImage_Utilities.h">vImage_Utilities.h</a></h1>
+<div class="spec_sheet_info_box"><table cellspacing="0" class="specbox"><tr>
+<td scope="row"><b>Includes:</b></td>
+<td><div style="margin-bottom:1px"><div class="content_text">
+<a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/header/vImage_Types.h" logicalPath="//apple_ref/doc/header/vImage_Types.h" target="_top">&lt;vImage/vImage_Types.h&gt;</a><br><!-- a logicalPath="//apple_ref/doc/header/CoreGraphics.h" machineGenerated="true" -->&lt;CoreGraphics/CoreGraphics.h&gt;<!-- /a -->
+</div></div></td>
+</tr></table></div>
+<h2>Introduction</h2>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/doc/header/vImage_Utilities.h;name=start --><p>These interfaces provide methods to help exchange data between CoreGraphics and vImage
+and provides conversion routines to convert nearly any image format to nearly any 
+other image format.  They are intended to streamline vImage adoption, and make it possible
+for your application's imaging pipeline to gracefully handle a wide diversity of image formats.
+When conversions are necessary, they are vectorized and multithreaded to minimize cost in
+time and energy.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/doc/header/vImage_Utilities.h;name=end --><!-- end discussion -->
+<hr class="afterClassOrHeaderInfo">
+<br><a name="HeaderDoc_groups"><h2 class="h2tight">Groups</h2></a>
+
+<h3>vImageConverterRef methods</h3>
+<div class="group_desc_indent">
+<p></p>
+<p>A vImageConverterRef describes a particular pixel format to pixel format conversion. These functions
+create, retain, release and get information about a vImageConverterRef. vImageConvert_AnyToAny() uses
+a vImageConverterRef to do a image format conversion.
+</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConvert_AnyToAny" logicalPath="//apple_ref/c/func/vImageConvert_AnyToAny" target="_top">vImageConvert_AnyToAny</a></tt></dt>
+<dd>
+<p>Use a vImageConverterRef to convert the pixels in a vImage_Buffer to another format
+</p>
+</dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat" logicalPath="//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat" target="_top">vImageConverter_CreateWithCGImageFormat</a></tt></dt>
+<dd><p>Create a vImageConverterRef to convert from ome vImage_CGImageFormat to another
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment" logicalPath="//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment" target="_top">vImageConverter_CreateWithColorSyncCodeFragment</a></tt></dt>
+<dd><p>Create a vImageConverterRef substituting in a custom ColorSync transform for the one vImage usually generates for the color conversion steps.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder" logicalPath="//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder" target="_top">vImageConverter_GetDestinationBufferOrder</a></tt></dt>
+<dd>
+<p>Get a list of vImage_Buffer channel names specifying the order of planes
+</p>
+</dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers" logicalPath="//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers" target="_top">vImageConverter_GetNumberOfDestinationBuffers</a></tt></dt>
+<dd><p>Get the number of destination buffers written to by the converter.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers" logicalPath="//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers" target="_top">vImageConverter_GetNumberOfSourceBuffers</a></tt></dt>
+<dd><p>Get the number of source buffers consumed by the converter.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_GetSourceBufferOrder" logicalPath="//apple_ref/c/func/vImageConverter_GetSourceBufferOrder" target="_top">vImageConverter_GetSourceBufferOrder</a></tt></dt>
+<dd>
+<p>Get a list of vImage_Buffer channel names specifying the order of planes
+</p>
+</dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace" logicalPath="//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace" target="_top">vImageConverter_MustOperateOutOfPlace</a></tt></dt>
+<dd><p>Determine whether a converter is capable of operating in place. 
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_Release" logicalPath="//apple_ref/c/func/vImageConverter_Release" target="_top">vImageConverter_Release</a></tt></dt>
+<dd><p>Release a vImageConverterRef
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_Retain" logicalPath="//apple_ref/c/func/vImageConverter_Retain" target="_top">vImageConverter_Retain</a></tt></dt>
+<dd><p>Retain a vImageConverterRef
+</p></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>vImage_CGImageFormat functions</h3>
+<div class="group_desc_indent">
+<p></p>
+<p>A vImage_CGImageFormat describes a pixel format compatible with CoreGraphics.
+Most access to the vImage_CGImageFormat struct is done directly through memberwise
+access, but a few tasks are complicated enough to deserve their own library function.
+</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageCGImageFormat_GetComponentCount" logicalPath="//apple_ref/c/func/vImageCGImageFormat_GetComponentCount" target="_top">vImageCGImageFormat_GetComponentCount</a></tt></dt>
+<dd><p>Calculate the number of channels (color + alpha) for a given image format
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageCGImageFormat_IsEqual" logicalPath="//apple_ref/c/func/vImageCGImageFormat_IsEqual" target="_top">vImageCGImageFormat_IsEqual</a></tt></dt>
+<dd><p>Test to see if two vImage_CGImageFormats are equivalent
+</p></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>vImage_Buffer utilities</h3>
+<div class="group_desc_indent">
+<p></p>
+<p>Convenience methods for working with vImage_Buffers.
+</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageBuffer_GetSize" logicalPath="//apple_ref/c/func/vImageBuffer_GetSize" target="_top">vImageBuffer_GetSize</a></tt></dt>
+<dd><p>Returns size of a vImage_Buffer as a CGSize.
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageBuffer_Init" logicalPath="//apple_ref/c/func/vImageBuffer_Init" target="_top">vImageBuffer_Init</a></tt></dt>
+<dd><p>Convenience function to allocate a vImage_Buffer of desired size
+</p></dd>
+</dl>
+</div>
+<p>&nbsp;</p>
+<h3>vImage_Buffer CGImageRef interconversion</h3>
+<div class="group_desc_indent">
+<p></p>
+<p>High level routines to convert from vImage_Buffer to CGImageRef and back.
+</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageBuffer_InitWithCGImage" logicalPath="//apple_ref/c/func/vImageBuffer_InitWithCGImage" target="_top">vImageBuffer_InitWithCGImage</a></tt></dt>
+<dd><p>Initialize a vImage_Buffer struct with the contents of a CGImageRef
+</p></dd>
+<dt><tt><a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageCreateCGImageFromBuffer" logicalPath="//apple_ref/c/func/vImageCreateCGImageFromBuffer" target="_top">vImageCreateCGImageFromBuffer</a></tt></dt>
+<dd><p>Create a CGImageRef from a vImage_Buffer.
+</p></dd>
+</dl>
+</div>
+<hr class="afterGroupHeading">
+<a name="HeaderDoc_functions"></a>
+<h2 class="h2tight">Functions</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageBuffer_GetSize" target="_top">vImageBuffer_GetSize</a></tt></dt>
+<dd><p>Returns size of a vImage_Buffer as a CGSize.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageBuffer_Init" target="_top">vImageBuffer_Init</a></tt></dt>
+<dd><p>Convenience function to allocate a vImage_Buffer of desired size
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageBuffer_InitWithCGImage" target="_top">vImageBuffer_InitWithCGImage</a></tt></dt>
+<dd><p>Initialize a vImage_Buffer struct with the contents of a CGImageRef
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageCGImageFormat_GetComponentCount" target="_top">vImageCGImageFormat_GetComponentCount</a></tt></dt>
+<dd><p>Calculate the number of channels (color + alpha) for a given image format
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageCGImageFormat_IsEqual" target="_top">vImageCGImageFormat_IsEqual</a></tt></dt>
+<dd><p>Test to see if two vImage_CGImageFormats are equivalent
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageConvert_AnyToAny" target="_top">vImageConvert_AnyToAny</a></tt></dt>
+<dd>
+<p>Use a vImageConverterRef to convert the pixels in a vImage_Buffer to another format
+</p>
+</dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat" target="_top">vImageConverter_CreateWithCGImageFormat</a></tt></dt>
+<dd><p>Create a vImageConverterRef to convert from ome vImage_CGImageFormat to another
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment" target="_top">vImageConverter_CreateWithColorSyncCodeFragment</a></tt></dt>
+<dd><p>Create a vImageConverterRef substituting in a custom ColorSync transform for the one vImage usually generates for the color conversion steps.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder" target="_top">vImageConverter_GetDestinationBufferOrder</a></tt></dt>
+<dd>
+<p>Get a list of vImage_Buffer channel names specifying the order of planes
+</p>
+</dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers" target="_top">vImageConverter_GetNumberOfDestinationBuffers</a></tt></dt>
+<dd><p>Get the number of destination buffers written to by the converter.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers" target="_top">vImageConverter_GetNumberOfSourceBuffers</a></tt></dt>
+<dd><p>Get the number of source buffers consumed by the converter.
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageConverter_GetSourceBufferOrder" target="_top">vImageConverter_GetSourceBufferOrder</a></tt></dt>
+<dd>
+<p>Get a list of vImage_Buffer channel names specifying the order of planes
+</p>
+</dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace" target="_top">vImageConverter_MustOperateOutOfPlace</a></tt></dt>
+<dd><p>Determine whether a converter is capable of operating in place. 
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageConverter_Release" target="_top">vImageConverter_Release</a></tt></dt>
+<dd><p>Release a vImageConverterRef
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageConverter_Retain" target="_top">vImageConverter_Retain</a></tt></dt>
+<dd><p>Retain a vImageConverterRef
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/func/vImageCreateCGImageFromBuffer" target="_top">vImageCreateCGImageFromBuffer</a></tt></dt>
+<dd><p>Create a CGImageRef from a vImage_Buffer.
+</p></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageBuffer_GetSize;   name=vImageBuffer_GetSize --><a name="//apple_ref/c/func/vImageBuffer_GetSize"></a>
+<h3><a name="vImageBuffer_GetSize">vImageBuffer_GetSize</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageBuffer_GetSize;name=start --><!-- begin abstract --></p>
+<p>Returns size of a vImage_Buffer as a CGSize.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageBuffer_GetSize;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageBuffer_GetSize;name=start --><!-- a logicalPath="//apple_ref/c/cl/CGSize //apple_ref/c/tdef/CGSize //apple_ref/c/tag/CGSize //apple_ref/c/struct/CGSize //apple_ref/c/intf/CGSize //apple_ref/doc/anysymbol/CGSize" machineGenerated="true" --><span class="type">CGSize</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageBuffer_GetSize" logicalPath="//apple_ref/c/instm/vImageBuffer_GetSize //apple_ref/c/clm/vImageBuffer_GetSize //apple_ref/c/intfcm/vImageBuffer_GetSize //apple_ref/c/intfm/vImageBuffer_GetSize //apple_ref/c/func/vImageBuffer_GetSize" target="_top"><span class="function">vImageBuffer_GetSize</span></a>(
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">buf</span> )  ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageBuffer_GetSize;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_GetSize/buf;   name=buf -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_GetSize/buf"></a>
+<code>buf</code>
+</dt>
+<dd><p>A pointer to a valid vImage_Buffer</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The largest CGSize that will fit in the buffer. In typical usage, this
+is equal to the size of the buffer.
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageBuffer_GetSize;name=start --><p>The CGSize / NSSize is rounded down to the nearest representable
+CGFloat that is less than or equal to the actual size of the image. In practice
+the conversion will always be exact, except for really, really big images. In
+that case, some part of the bottom or right edge might be truncated.
+</p>
+  <pre>
+  Rationale: If you attempt your own home-made conversion to CGSize / NSSize by
+            ordinary C rules and the value rounds, it will round up half the time.
+            This could lead to a crash later because the height or width
+            will be reported to be larger than it really is and an ensuing image
+            operation will attempt to touch scanlines that don't exist.
+  </pre>
+
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageBuffer_GetSize;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageBuffer_Init;   name=vImageBuffer_Init --><a name="//apple_ref/c/func/vImageBuffer_Init"></a>
+<h3><a name="vImageBuffer_Init">vImageBuffer_Init</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageBuffer_Init;name=start --><!-- begin abstract --></p>
+<p>Convenience function to allocate a vImage_Buffer of desired size
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageBuffer_Init;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageBuffer_Init;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageBuffer_Init" logicalPath="//apple_ref/c/instm/vImageBuffer_Init //apple_ref/c/clm/vImageBuffer_Init //apple_ref/c/intfcm/vImageBuffer_Init //apple_ref/c/intfm/vImageBuffer_Init //apple_ref/c/func/vImageBuffer_Init" target="_top"><span class="function">vImageBuffer_Init</span></a>(
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">buf</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImagePixelCount" logicalPath="//apple_ref/c/cl/vImagePixelCount //apple_ref/c/tdef/vImagePixelCount" target="_top"><span class="type">vImagePixelCount</span></a> <span class="param">height</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImagePixelCount" logicalPath="//apple_ref/c/cl/vImagePixelCount //apple_ref/c/tdef/vImagePixelCount" target="_top"><span class="type">vImagePixelCount</span></a> <span class="param">width</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <span class="param">pixelBits</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span>)  ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageBuffer_Init;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_Init/buf;   name=buf -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_Init/buf"></a>
+<code>buf</code>
+</dt>
+<dd><p>A valid empty vImage_Buffer struct. On return, all fields will be initialized.
+Please see behavior of kvImageNoAllocate in the flags parameter below.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_Init/height;   name=height -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_Init/height"></a>
+<code>height</code>
+</dt>
+<dd><p>The desired height of the image</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_Init/width;   name=width -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_Init/width"></a>
+<code>width</code>
+</dt>
+<dd><p>The desired width of the image</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_Init/pixelBits;   name=pixelBits -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_Init/pixelBits"></a>
+<code>pixelBits</code>
+</dt>
+<dd><p>The number of bits in a pixel of image data. If the image is in a planar format
+then this is the number of bits per color component. If pixelBits is not divisible
+by 8, then vImage will pad the scanline out to a multiple of a byte so that
+two scanlines can not share the same byte and all scanlines start at the start of 
+a byte.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_Init/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_Init/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>Must be from the following list:
+</p>
+  <pre>
+                          kvImageNoAllocate -- on return buf-&gt;data is initialized to NULL. A preferred
+                              alignment suitable for use with posix_memalign is returned out the left hand 
+                              side of the function and buf-&gt;rowBytes will be set to the preferred rowBytes. 
+                              If the left hand side return is negative, it is an error code, not a size. 
+                          
+                              If the kvImageNoAllocate flag is not passed, then on return buf-&gt;data will point 
+                              to a newly allocated buffer with preferred alignment and rowBytes. An appropriate 
+                              error code will be returned from the left hand side.
+
+                          kvImagePrintDiagnosticsToConsole -- directs the function to print diagnostic information
+                              to the console in the event of failure. 
+  </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>One of the following error codes will be returned out the left hand side.
+</p>
+  <pre>
+      &gt;0                              kvImageNoAllocate was passed. The value returned indicates the
+                                      preferred alignment (in bytes) for buf-&gt;data. buf-&gt;data is NULL.
+
+      kvImageNoError                  Success
+
+      kvImageMemoryAllocationError    you requested that buf-&gt;data be allocated but the allocation failed
+
+      kvImageUnknownFlagsBit          flags was not from the list above
+  </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageBuffer_Init;name=start --><p>This function is a convenience method to help initialize a vImage_Buffer struct with a buffer sized
+and aligned for best performance. It will initialize the height, width and rowBytes fields, and allocate 
+the pixel storage for you. You are responsible for releasing the memory pointed to by buf-&gt;data back to 
+the system when you are done with it using free(). If no such allocation is desired, pass  
+kvImageNoAllocate in the flags to cause buf-&gt;data to be set to NULL and the preferred alignment 
+to be returned from the left hand side of the function.
+</p>
+<p>Here is an example of typical usage:
+</p>
+  <pre>
+      vImage_Buffer buf;
+      vImage_Error err = vImageBuffer_Init( &amp;buf, height, width, 8 * sizeof(pixel), kvImageNoFlags);
+      ...
+  </pre>
+
+<p>And typical usage using your own allocator (posix_memalign in this case):
+</p>
+  <pre>
+      vImage_Buffer buf;
+      ssize_t alignment = vImageBuffer_Init( &amp;buf, height, width, 8 * sizeof(pixel), kvImageNoAllocate);
+      if( alignment &gt;= 0 )  // &lt;0 is an error
+          error = posix_memalign( &amp;buf.data, alignment, buf.height * buf.rowBytes );  // An allocator
+  </pre>
+
+<p>On return, buf is initialized to contain the provided height and width and best rowBytes for the image.
+buf-&gt;data will also be allocated by default. If kvImageNoAllocate is passed then allocation is skipped,
+buf-&gt;data is set to NULL, and the preferred alignment is returned out the left hand side of the
+function.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageBuffer_Init;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageBuffer_InitWithCGImage;   name=vImageBuffer_InitWithCGImage --><a name="//apple_ref/c/func/vImageBuffer_InitWithCGImage"></a>
+<h3><a name="vImageBuffer_InitWithCGImage">vImageBuffer_InitWithCGImage</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageBuffer_InitWithCGImage;name=start --><!-- begin abstract --></p>
+<p>Initialize a vImage_Buffer struct with the contents of a CGImageRef
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageBuffer_InitWithCGImage;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageBuffer_InitWithCGImage;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageBuffer_InitWithCGImage" logicalPath="//apple_ref/c/instm/vImageBuffer_InitWithCGImage //apple_ref/c/clm/vImageBuffer_InitWithCGImage //apple_ref/c/intfcm/vImageBuffer_InitWithCGImage //apple_ref/c/intfm/vImageBuffer_InitWithCGImage //apple_ref/c/func/vImageBuffer_InitWithCGImage" target="_top"><span class="function">vImageBuffer_InitWithCGImage</span></a>(
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">buf</span>, 
+    <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" logicalPath="//apple_ref/c/cl/vImage_CGImageFormat //apple_ref/c/tdef/vImage_CGImageFormat" target="_top"><span class="type">vImage_CGImageFormat</span></a> <span class="type">*</span><span class="param">format</span>, 
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <span class="type">*</span><span class="param">backgroundColor</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/CGImageRef //apple_ref/c/tdef/CGImageRef //apple_ref/c/tag/CGImageRef //apple_ref/c/struct/CGImageRef //apple_ref/c/intf/CGImageRef //apple_ref/doc/anysymbol/CGImageRef" machineGenerated="true" --><span class="type">CGImageRef</span><!-- /a --> <span class="param">image</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> )  ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageBuffer_InitWithCGImage;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_InitWithCGImage/buf;   name=buf -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_InitWithCGImage/buf"></a>
+<code>buf</code>
+</dt>
+<dd>
+<p>A pointer to a valid vImage_Buffer struct. The fields of the structure pointed to by buf will
+be updated to point to a vImage_Buffer representation of the CGImage. By default, a newly
+allocated piece of memory will be used to hold the image. You are responsible
+for releasing the memory pointed to by buf-&gt;data back to the system using free().
+</p>
+<p>If you want to allocate the buf-&gt;data and initialize rowBytes yourself, then you may pass 
+kvImageNoAllocate in the flags parameter. This will cause the buf-&gt;data and rowBytes values  
+passed into the function to be used directly without modification.  You may find vImageBuffer_Init,  
+vImageCGImageFormat_GetPixelBits, CGImageGetWidth and CGImageGetHeight helpful in sizing your buffer.</p>
+</dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_InitWithCGImage/format;   name=format -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_InitWithCGImage/format"></a>
+<code>format</code>
+</dt>
+<dd><p>A pointer to a valid vImage_CGImageFormat specifying the desired image format associated with the 
+output buf. If format-&gt;colorspace is NULL, sRGB will be used.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_InitWithCGImage/backgroundColor;   name=backgroundColor -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_InitWithCGImage/backgroundColor"></a>
+<code>backgroundColor</code>
+</dt>
+<dd><p>If the CGImageRef encodes an alpha (or mask) and the output format does not have alpha then the
+result will be flattened against a background color. See vImageConverter_CreateWithCGImageFormat
+and functions like vImageFlatten_ARGB8888ToRGB888 for more on flattening. The background color here is
+a series of values of range [0,1] interpreted according to the colorspace passed in format. Example: If 
+the format encodes for a AGBR 8-bit image (kCGImageAlphaLast, kCGBitmapByteOrder32Little), then this would be
+{red, green, blue}, the canonical ordering for a RGB colorspace, as an array of three CGFloats.  
+If NULL is passed, an array full of zeros is used. The backgroundColor must have at least as many
+CGFloats in it as the colorspace has color channels. See CGColorSpaceGetNumberOfComponents.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_InitWithCGImage/image;   name=image -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_InitWithCGImage/image"></a>
+<code>image</code>
+</dt>
+<dd><p>A valid CGImageRef to be used as source data.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageBuffer_InitWithCGImage/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageBuffer_InitWithCGImage/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>You may set the following flags:
+</p>
+  <pre>
+                  kvImageNoAllocate       the buf-&gt;data and buf-&gt;rowBytes values passed in are used without modification.
+                                          This allows you to allocate your own buffer to hold the result. See buf description
+                                          above.
+
+                  kvImagePrintDiagnosticsToConsole    In the event of a problem, print out some helpful debug messages.
+
+                  kvImageDoNoTile         It is possible that vImage will have to do an image format conversion from the
+                                          image native format to the desired format. This will turn off multithreading for
+                                          that step and any other vImage work that is multithreaded. Since any such conversions
+                                          are likely happening outside your tiling engine, use of this flag here is 
+                                          probably counterproductive. In rare cases, it might be valuable as a method to 
+                                          leave unoccupied some cores for other tasks, if you have other multithreaded time 
+                                          sensitive tasks running. Likewise, if you are converting multiple images concurrently,
+                                          it might be helpful to avoid oversubscribing the system.
+   </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>If the call succeeds, kvImageNoError is returned and the memory region pointed to by buf will be initialized to
+describe a valid repesentation of the CGImageRef. 
+</p>
+<p>If the call fails, then one of the following error codes will be returned and buf-&gt;data will be set to NULL.
+</p>
+  <pre>
+          kvImageUnknownFlagsBit              flags must be kvImageNoFlags or kvImageNoAllocate
+          kvImageMemoryAllocationError        Not enough memory to allocate buf-&gt;data 
+          kvImageInvalidParameter             format-&gt;bitmapInfo has unknown bits set
+          kvImageInvalidParameter             format-&gt;version is not 0
+          kvImageInvalidParameter             format-&gt;decode is not NULL
+          kvImageInvalidParameter             format-&gt;bitsPerComponent is not in {0,1,2,4,5,8,16,32}
+          kvImageInvalidImageFormat           format-&gt;renderingIntent is not a known value
+          kvImageInvalidImageFormat           The format called for conversion to an input-only colorspace. Some color profiles
+                                              (e.g. those arising from a scanner) are described as input only, because the device can
+                                              not produce image output.
+          kvImageNullPointerArgument          format may not be NULL
+          kvImageNullPointerArgument          image may not be NULL
+          kvImageInternalError                Something unexpected went wrong. Please file a bug. 
+   </pre>
+
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageBuffer_InitWithCGImage;name=start --><p>This function will initialize a vImage_Buffer struct with an image from a CGImageRef.
+By default, a new region of memory to hold the image data will be allocated by this function.  You may
+optionally allocate the memory region yourself by passing in the kvImageNoAllocate flag. 
+</p>
+<p>You may release the CGImageRef and format-&gt;colorspace upon successful return of this function.
+</p>
+<p>You are responsible for returning the memory referenced by buf-&gt;data to the system using free() when you are done with it.
+The CGImage may have other metadata associated with it, such as camera orientiation, which may require further
+processing downstream.  vImage just does 1:1 pixel conversions from the raw image source.
+</p>
+
+<p>To create a CGImageRef from a image file on disk:
+</p>
+  <pre>
+     CFURLRef path = ...;  // path to image
+     CGImageSourceRef imageSource = CGImageSourceCreateWithURL( path, optionsDictionary ); // optionsDictionary may be NULL
+     CGImageRef imageRef = CGImageSourceCreateImageAtIndex( imageSource, imageIndex, optionsDictionary );
+  </pre>
+
+<p>Similarly, with a chunk of compressed image data in memory:
+</p>
+  <pre>
+     CFDataRef data = ...;
+     CGImageSourceRef imageSource = CGImageSourceCreateWithData( path, optionsDictionary );
+     CGImageRef imageRef = CGImageSourceCreateImageAtIndex( imageSource, imageIndex, optionsDictionary );
+  </pre>
+
+<p>You can do similar things through AppKit / UIKit with [NSImage initWithContentsOfFile:],
+[NSImage initWithContentsOfURL:], or [NSImage initWithData:],  and use [NSImage CGImageForProposedRect:context:hints:]
+to get out a CGImageRef.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageBuffer_InitWithCGImage;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageCGImageFormat_GetComponentCount;   name=vImageCGImageFormat_GetComponentCount --><a name="//apple_ref/c/func/vImageCGImageFormat_GetComponentCount"></a>
+<h3><a name="vImageCGImageFormat_GetComponentCount">vImageCGImageFormat_GetComponentCount</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageCGImageFormat_GetComponentCount;name=start --><!-- begin abstract --></p>
+<p>Calculate the number of channels (color + alpha) for a given image format
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageCGImageFormat_GetComponentCount;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageCGImageFormat_GetComponentCount;name=start --><!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageCGImageFormat_GetComponentCount" logicalPath="//apple_ref/c/instm/vImageCGImageFormat_GetComponentCount //apple_ref/c/clm/vImageCGImageFormat_GetComponentCount //apple_ref/c/intfcm/vImageCGImageFormat_GetComponentCount //apple_ref/c/intfm/vImageCGImageFormat_GetComponentCount //apple_ref/c/func/vImageCGImageFormat_GetComponentCount" target="_top"><span class="function">vImageCGImageFormat_GetComponentCount</span></a>(
+    <span class="keyword">const</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" logicalPath="//apple_ref/c/cl/vImage_CGImageFormat //apple_ref/c/tdef/vImage_CGImageFormat" target="_top"><span class="type">vImage_CGImageFormat</span></a> <span class="type">*</span><span class="param">format</span> )  ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageCGImageFormat_GetComponentCount;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageCGImageFormat_GetComponentCount/format;   name=format -->
+<a name="//apple_ref/doc/functionparam/vImageCGImageFormat_GetComponentCount/format"></a>
+<code>format</code>
+</dt>
+<dd><p>A pointer to a valid vImage_CGImageFormat.  If format-&gt;colorspace is NULL,
+the format is assumed to belong to the sRGB colorspace.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>Returns the number of color + alpha channels in the image.
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageCGImageFormat_GetComponentCount;name=start --><p>The number of channels may not be safely calculated as bitsPerPixel / bitsPerComponent.
+Use this routine instead. 
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageCGImageFormat_GetComponentCount;name=end --><!-- end discussion -->
+</p>
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageCGImageFormat_IsEqual;   name=vImageCGImageFormat_IsEqual --><a name="//apple_ref/c/func/vImageCGImageFormat_IsEqual"></a>
+<h3><a name="vImageCGImageFormat_IsEqual">vImageCGImageFormat_IsEqual</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageCGImageFormat_IsEqual;name=start --><!-- begin abstract --></p>
+<p>Test to see if two vImage_CGImageFormats are equivalent
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageCGImageFormat_IsEqual;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageCGImageFormat_IsEqual;name=start --><!-- a logicalPath="//apple_ref/c/cl/Boolean //apple_ref/c/tdef/Boolean //apple_ref/c/tag/Boolean //apple_ref/c/struct/Boolean //apple_ref/c/intf/Boolean //apple_ref/doc/anysymbol/Boolean" machineGenerated="true" --><span class="type">Boolean</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageCGImageFormat_IsEqual" logicalPath="//apple_ref/c/instm/vImageCGImageFormat_IsEqual //apple_ref/c/clm/vImageCGImageFormat_IsEqual //apple_ref/c/intfcm/vImageCGImageFormat_IsEqual //apple_ref/c/intfm/vImageCGImageFormat_IsEqual //apple_ref/c/func/vImageCGImageFormat_IsEqual" target="_top"><span class="function">vImageCGImageFormat_IsEqual</span></a>(
+    <span class="keyword">const</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" logicalPath="//apple_ref/c/cl/vImage_CGImageFormat //apple_ref/c/tdef/vImage_CGImageFormat" target="_top"><span class="type">vImage_CGImageFormat</span></a> <span class="type">*</span><span class="param">f1</span>,
+    <span class="keyword">const</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" logicalPath="//apple_ref/c/cl/vImage_CGImageFormat //apple_ref/c/tdef/vImage_CGImageFormat" target="_top"><span class="type">vImage_CGImageFormat</span></a> <span class="type">*</span><span class="param">f2</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageCGImageFormat_IsEqual;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageCGImageFormat_IsEqual/f1;   name=f1 -->
+<a name="//apple_ref/doc/functionparam/vImageCGImageFormat_IsEqual/f1"></a>
+<code>f1</code>
+</dt>
+<dd><p>A pointer to the first vImage_CGImageFormat</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageCGImageFormat_IsEqual/f2;   name=f2 -->
+<a name="//apple_ref/doc/functionparam/vImageCGImageFormat_IsEqual/f2"></a>
+<code>f2</code>
+</dt>
+<dd><p>A pointer to the second vImage_CGImageFormat</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>nonzero if two vImage_CGImageFormats are the same
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageCGImageFormat_IsEqual;name=start --><p>Returns nonzero if two vImage_CGImageFormats are the same
+If either operand is NULL, the result is false.
+If vImage_CGImageFormat.colorSpace is NULL, sRGB is used.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageCGImageFormat_IsEqual;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageConvert_AnyToAny;   name=vImageConvert_AnyToAny --><a name="//apple_ref/c/func/vImageConvert_AnyToAny"></a>
+<h3><a name="vImageConvert_AnyToAny">vImageConvert_AnyToAny</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConvert_AnyToAny;name=start --><!-- begin abstract --></p>
+<p>Use a vImageConverterRef to convert the pixels in a vImage_Buffer to another format
+</p>
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConvert_AnyToAny;name=end -->
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConvert_AnyToAny;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConvert_AnyToAny" logicalPath="//apple_ref/c/instm/vImageConvert_AnyToAny //apple_ref/c/clm/vImageConvert_AnyToAny //apple_ref/c/intfcm/vImageConvert_AnyToAny //apple_ref/c/intfm/vImageConvert_AnyToAny //apple_ref/c/func/vImageConvert_AnyToAny" target="_top"><span class="function">vImageConvert_AnyToAny</span></a>(
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/vImageConverterRef //apple_ref/c/tdef/vImageConverterRef //apple_ref/c/tag/vImageConverterRef //apple_ref/c/struct/vImageConverterRef //apple_ref/c/intf/vImageConverterRef //apple_ref/doc/anysymbol/vImageConverterRef" machineGenerated="true" --><span class="type">vImageConverterRef</span><!-- /a --> <span class="param">converter</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">srcs</span>, <span class="comment">/* an array of vImage_Buffer structs describing source data planes */</span>
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dests</span>, <span class="comment">/* an array of vImage_Buffer structs describing destination data planes */</span>
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">tempBuffer</span>, <span class="comment">/* may be NULL */</span>
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span> )  ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConvert_AnyToAny;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConvert_AnyToAny/converter;   name=converter -->
+<a name="//apple_ref/doc/functionparam/vImageConvert_AnyToAny/converter"></a>
+<code>converter</code>
+</dt>
+<dd><p>A valid vImageConverterRef indicating what conversion to do. The same vImageConverterRef
+may be used concurrently from multiple threads. vImageConverterRefs may be created with
+vImageConverter_CreateWithCGImageFormat, vImageConverter_CreateWithColorSyncCodeFragment,
+vImageConverter_CreateForCGToCVImageFormat or vImageConverter_CreateForCVToCGImageFormat.
+May not be NULL.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConvert_AnyToAny/srcs;   name=srcs -->
+<a name="//apple_ref/doc/functionparam/vImageConvert_AnyToAny/srcs"></a>
+<code>srcs</code>
+</dt>
+<dd><p>a pointer to an array of vImage_Buffer structs that describe the color planes that make
+up the input image. Please see the description of the function that created the
+vImageConverter for the ordering and number of input buffers. The ordering can also be
+determined manually using vImageConverter_GetSourceBufferOrder.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConvert_AnyToAny/dests;   name=dests -->
+<a name="//apple_ref/doc/functionparam/vImageConvert_AnyToAny/dests"></a>
+<code>dests</code>
+</dt>
+<dd><p>a pointer to an array of vImage_Buffer structs that describe the color planes that make
+up the result image. Please see the description of the function that created the
+vImageConverter for the ordering and number of output buffers. The ordering can also be
+determined manually using vImageConverter_GetSourceBufferOrder. The destination buffer may
+only alias the srcs buffers only if vImageConverter_MustOperateOutOfPlace() returns 0, and
+only if the respective scanlines of the aliasing buffers start at the same address.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConvert_AnyToAny/tempBuffer;   name=tempBuffer -->
+<a name="//apple_ref/doc/functionparam/vImageConvert_AnyToAny/tempBuffer"></a>
+<code>tempBuffer</code>
+</dt>
+<dd><p>May be NULL. If not NULL, the memory pointed to by tempBuffer will be used as scratch space
+by the function. The size of the tempBuffer can be determined by passing kvImageGetTempBufferSize
+to the in the flags parameter. See below. If NULL is passed here and a tempBuffer is needed '
+(temp buffer size &gt; 0) then the function will allocate one on the heap and free it before
+returning. This may run more slowly, both because of the allocation cost and the cost of VM
+faults to zero fill pages as they are used. NULL is the right option when the function is
+used infrequently or convenience is valued.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConvert_AnyToAny/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageConvert_AnyToAny/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed. Other flags will trigger an error.
+</p>
+  <pre>
+                  kvImagePrintDiagnosticsToConsole    In the event of a problem, print out some helpful debug messages.
+
+                  kvImageGetTempBufferSize            No image conversion work is done. The value returned out the
+                                                      left hand side of the function is the an error code if it is
+                                                      less than zero. Otherwise, it is the size of the tempBuffer
+                                                      to be passed into the function. The size may be 0.
+
+                  kvImageDoNotTile                    Disables internal multithreading.  You may wish to pass this
+                                                      flag if you are doing your own threading and think it will
+                                                      conflict with vImage's attempts to do the same.
+
+                  kvImageNoFlags                      Default behavior.
+   </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The following error codes may be returned:
+  </p>
+<pre>
+      kvImageNoError                      Success!
+
+      0                                   kvImageGetTempBufferSize was passed in flags, and no temp buffer is needed.
+
+      &gt;0                                  kvImageGetTempBufferSize was passed in flags. The value indicates the size
+                                          of the temp buffer needed.
+
+      kvImageMemoryAllocationError        NULL was passed in tempBuffer and vImage failed to allocate its own
+                                              temp buffer
+      kvImageBufferSizeMismatch           The source buffer(s) must be at least as large as the destination buffer(s)
+                                           (src.height &gt;= dest.height &amp;&amp; src.width &gt;= dest.width)
+      kvImageUnknownFlagsBit              A flag was passed to the vImageConverter creation function which is
+                                          unrecognized or not appropriate to this function
+      kvImageNullPointerArgument          converter is NULL
+      kvImageInvalidParameter             One of the buffers pointed to by srcs or dests has a NULL vImage_Buffer.data pointer
+      kvImageUnknownFlagsBit              An unknown or unsupported flags bit was set.
+      kvImageInvalidImageFormat           if a byte ordering is specified (e.g. kCGBitmapByteOrder16Little), the buffer.rowBytes
+                                          must be multiple of 2 (kCGBitmapByteOrder16Little, kCGBitmapByteOrder16Big) or
+                                          4 (kCGBitmapByteOrder32Little, kCGBitmapByteOrder32Big)
+   </pre>
+
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConvert_AnyToAny;name=start --><p>With an appropriately configured vImageConverter, convert the image channels found in srcs
+to the image channels found in dests. Whenever possible, conversion passes are vectorized and multithreaded
+to reduce the time and energy cost of the function.
+</p>
+<p>Please use vImageConverter_MustOperateOutOfPlace() to determine whether a particular conversion can operate in place.
+For an in-place conversion to work, it is required that srcs[i].data = dests[i].data and srcs[i].rowBytes = dests[i].rowBytes.
+</p>
+<p>All scanlines must start at an at least byte aligned address. (Some formats have 1, 2, 4 or 12 bits per channel/pixel and
+conceivably might not start at a byte aligned address.) A single byte may not span multiple rows of data. 
+</p>
+<p>Some formats, particarly YUV 422 and 420 and those that have pixel size not evenly divisble by 8 bits, operate in chunks 
+containing multiple pixels. For example, a Y'CbCr 422 chunk may have {Y0, Cb, Y1, Cr} in the chunk. The chunk contains two
+pixels, each with an independent Y (luminance) component, but shared chrominance.  Even though the chunk width is two, 
+it is still possible for an image to have a width that is not divisible by two. This means that some part of the chunk on
+the rightmost edge of the scanline must refer to a non-existant pixel. When reading incomplete chunks, vImage will only
+touch the unused parts of the chunk when it knows it to be safe to do so. When writing incomplete chunks, vImage will 
+copy the rightmost valid pixel color into the unused part of the chunk. Thus, on reading the entire chunk doesn't have to
+be there, but on writing, it does. Conventions on this are varied among chunk using imaging pipelines and this conservative
+approach should interoperate with most. However, some care must be exercised when writing to chunk based formats (not to be
+confused with chunky formats which merely have several channels interleaved) to make sure that the buffer is large enough
+to tolerate the write policy.  If you are tiling chunk based data, care must be taken not to run tile boundaries 
+through the middle of a chunk.  Chunks are assumed to be indivisible.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConvert_AnyToAny;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat;   name=vImageConverter_CreateWithCGImageFormat --><a name="//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat"></a>
+<h3><a name="vImageConverter_CreateWithCGImageFormat">vImageConverter_CreateWithCGImageFormat</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat;name=start --><!-- begin abstract --></p>
+<p>Create a vImageConverterRef to convert from ome vImage_CGImageFormat to another
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat;name=start --><!-- a logicalPath="//apple_ref/c/cl/vImageConverterRef //apple_ref/c/tdef/vImageConverterRef //apple_ref/c/tag/vImageConverterRef //apple_ref/c/struct/vImageConverterRef //apple_ref/c/intf/vImageConverterRef //apple_ref/doc/anysymbol/vImageConverterRef" machineGenerated="true" --><span class="type">vImageConverterRef</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat" logicalPath="//apple_ref/c/instm/vImageConverter_CreateWithCGImageFormat //apple_ref/c/clm/vImageConverter_CreateWithCGImageFormat //apple_ref/c/intfcm/vImageConverter_CreateWithCGImageFormat //apple_ref/c/intfm/vImageConverter_CreateWithCGImageFormat //apple_ref/c/func/vImageConverter_CreateWithCGImageFormat" target="_top"><span class="function">vImageConverter_CreateWithCGImageFormat</span></a>(
+    <span class="keyword">const</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" logicalPath="//apple_ref/c/cl/vImage_CGImageFormat //apple_ref/c/tdef/vImage_CGImageFormat" target="_top"><span class="type">vImage_CGImageFormat</span></a> <span class="type">*</span><span class="param">srcFormat</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" logicalPath="//apple_ref/c/cl/vImage_CGImageFormat //apple_ref/c/tdef/vImage_CGImageFormat" target="_top"><span class="type">vImage_CGImageFormat</span></a> <span class="type">*</span><span class="param">destFormat</span>, 
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <span class="type">*</span><span class="param">backgroundColor</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <span class="type">*</span><span class="param">error</span> )  ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithCGImageFormat/srcFormat;   name=srcFormat -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithCGImageFormat/srcFormat"></a>
+<code>srcFormat</code>
+</dt>
+<dd><p>A pointer to a populated vImage_CGImageFormat struct describing the image format
+of the source image. If the CGColorSpaceRef is NULL, sRGB will be used
+as the default value. The CGColorSpaceRef will be retained by this function. It
+will be released when the vImageConverter is destroyed.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithCGImageFormat/destFormat;   name=destFormat -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithCGImageFormat/destFormat"></a>
+<code>destFormat</code>
+</dt>
+<dd><p>A pointer to a populated vImage_CGImageFormat struct describing the image format
+of the destination image. If the CGColorSpaceRef is NULL, sRGB will be
+used as the default value. The CGColorSpaceRef will be retained by this function.
+It will be released when the vImageConverter is destroyed.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithCGImageFormat/backgroundColor;   name=backgroundColor -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithCGImageFormat/backgroundColor"></a>
+<code>backgroundColor</code>
+</dt>
+<dd>
+<p>Points to an array of floats to be used as a background color if one is needed. The
+backgroundColor range is assumed to be [0,1]. The channel ordering and number of color 
+channels must match the natural order of the destination colorSpace (e.g. RGB or CMYK). 
+The backgroundColor may be NULL if no background color is needed. 
+</p>
+<p>A background color is used when the image is converted from an alpha-containing format 
+to an alpha-none format, in which case the alpha is removed by compositing against the 
+opaque background color pointed to by this parameter. If the image is instead converted 
+from one alpha containing format to another, then the image will be premultiplied or 
+unpremultiplied as necessary and no background color is necessary. (For unpremultiplication, 
+the result color value for pixels with alpha 0 is 0.)  Likewise, when converting between
+alpha-none formats, a background color is not use. In the case of kCGImageAlphaNone -&gt;
+kCGImageAlphaNoneSkipFirst/Last, the vacant alpha channel is filled in with 1.0. If NULL
+is passed here, then 0 will be used for the color channels. 
+</p>
+<p>The vImageConverter will contain a copy of the data passed in this field.</p>
+</dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithCGImageFormat/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithCGImageFormat/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>Any of the following flags are allowed:
+</p>
+  <pre>
+           kvImagePrintDiagnosticsToConsole    In the event of a problem, print out some helpful debug
+                                               messages.
+
+           kvImageDoNotTile                    A converter created with this flag will operate as if
+                                               kvImageDoNotTile was passed to vImageConvert_AnyToAny
+                                               whether it was or not.
+   </pre>
+</dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithCGImageFormat/error;   name=error -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithCGImageFormat/error"></a>
+<code>error</code>
+</dt>
+<dd>
+<p>May be NULL.  If not NULL, then a vImage_Error is returned at the address pointed to by error. 
+The vImage_Error will be less than 0 if an error condition occurred. Checking the vImageConverter 
+returned to make sure it is non-NULL is sufficient to verify success or failure of the function.
+</p>
+<p>The following error values can occur:
+  </p>
+<pre>
+      kvImageNoError                      Success.
+
+      kvImageNullPointerArgument          srcFormat and/or destFormat is NULL.
+
+      kvImageUnknownFlagsBit              Currently only kvImagePrintDiagnosticsToConsole and kvImageDoNotTile are
+                                          allowed. All other bits in the flags field must be 0.
+
+      kvImageInvalidParameter             backgroundColor is NULL and the conversion needed a backgroundColor
+
+      kvImageInvalidImageFormat           bitsPerComponent must be in {1,2,4,5,8,12,16,32}.
+      kvImageInvalidImageFormat           The base colorspace must be grayscale for destination images using indexed color.
+      kvImageInvalidImageFormat           The colorspace may be indexed color for images only if it is {1,2,4,8} bitsPerComponent
+                                          and kCGImageAlphaNone.
+      kvImageInvalidImageFormat           vImage_CGImageFormat.bitmapInfo &amp; kCGBitmapAlphaInfoMask  does not encode a valid alpha
+      kvImageInvalidImageFormat           floating point formats must be 16 or 32 bits per component. 16-bit floats are
+                                          IEEE-754-2008 binary16 interchange format  (a.k.a. OpenEXR half float). 32-bit floats
+                                          are the standard IEEE-754-2008 binary32 interchange format. (a.k.a float in C/C++/ObjC)
+      kvImageInvalidImageFormat           format-&gt;renderingIntent is not a known value
+      kvImageInvalidImageFormat           The conversion called for conversion to an input-only colorspace. Some color profiles
+                                          (e.g. those arising from a scanner) are described as input only, because the device can
+                                          not produce image output.
+
+      kvImageInternalError                The converter was unable to find a path from the source format to the destination format.
+                                          This should not happen and indicates incorrect operation of the function. Please file a bug.
+                                          The kvImagePrintDiagnosticsToConsole flag will provide additional diagnostic info.
+   </pre>
+
+<p>In cases where the error code is not sufficient to quickly determine the problem, the kvImagePrintDiagnosticsToConsole flag
+should provide additional diagnostic info.</p>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>A vImageConverter object with reference count of 1 is created. If the call fails due to an error, then NULL
+will be returned. Use vImageConverter_Release to release your reference to it and allow the resources used
+by the converter to be returned to the system.
+</p>
+<p>If error is not NULL, an error code will be written to that address on return.
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat;name=start --><p>vImageConverter_CreateWithCGImageFormat creates a vImageConverter to convert between
+image formats describable with a vImage_CGImageFormat.  The vImageConverter is intended
+to be used (and reused, possibly reentrantly) with vImageConvert_AnyToAny() to convert 
+images from one format to another.
+</p>
+  <pre>
+  Image Format Notes:
+      CG Integer images map the range [0,1.0] (black to full color intensity) to the range [0, TYPE_MAX]. A 8-bit unsigned image
+  has a range [0,255] and a 16-bit signed image has a range [0,32767]. Floating point images map [0,1.0] to [0,1.0]. Some formats,
+  like floating-point and signed integers are capable of representing values outside of that range. Conversions involving these
+  formats will occasionally produce results outside of [0,1]. If the conversion causes a value to go out of the representable range
+  for the underlying type, it will be clamped to the nearest representable value. This can happen in normal operation during color
+  correction. You can clamp floating-point results back into [0,1] using vImageClip_PlanarF, if you like.
+
+      Usually, colors must be direct mapped. Indexed color is supported format-&gt;bitsPerComponent and format-&gt;.bitsPerPixel are 1,2,4
+  or 8, and equal (i.e. grayscale) only. Indexed color is not supported for the destination image. Images with indexed color must use
+  (kCGImageAlphaNone | kCGBitmapByteOrderDefault) as the bitmapInfo. It is usually faster with indexed color spaces to use
+  vImageConvert_AnyToAny to convert the color table rather than the image itself when possible, because the table is usually much
+  smaller than the image. vImageConvert_AnyToAny can not do that automatically for you behind the scenes because it does not return
+  a modified colorspace.
+
+  Device Colorspaces:
+  Because vImage has no concept of a rendering context or destination graphics device, vImage maps device RGB, device grayscale
+  and device CMYK to a virtual device which is not your display. The virtual device uses kColorSyncGenericGrayGamma22Profile,
+  kColorSyncSRGBProfile and kColorSyncGenericCMYKProfile respectively. If you want the image to be converted to the right colorspace
+  for your display device, you will need to pass in the CGColorSpaceRef for that device obtained from an API like CGDisplayCopyColorSpace().
+
+  Black Point Compensation:
+  By default, BPC is off for this function. If you want black point compensation or other advanced ColorSync effects, construct your
+  own ColorSyncTransformRef and pass the associated "code fragment" to vImageConverter_CreateWithColorSyncCodeFragment.
+  See Apple Sample Code "Converting an Image with Black Point Compensation" https://developer.apple.com/library/mac/samplecode/convertImage/Introduction/Intro.html
+   </pre>
+
+<p>See also vImageConverter_CreateForCGToCVImageFormat and vImageConverter_CreateForCVToCGImageFormat for converters
+that can operate on CoreVideo formats.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_CreateWithCGImageFormat;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment;   name=vImageConverter_CreateWithColorSyncCodeFragment --><a name="//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment"></a>
+<h3><a name="vImageConverter_CreateWithColorSyncCodeFragment">vImageConverter_CreateWithColorSyncCodeFragment</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment;name=start --><!-- begin abstract --></p>
+<p>Create a vImageConverterRef substituting in a custom ColorSync transform for the one vImage usually generates for the color conversion steps.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment;name=start --><!-- a logicalPath="//apple_ref/c/cl/vImageConverterRef //apple_ref/c/tdef/vImageConverterRef //apple_ref/c/tag/vImageConverterRef //apple_ref/c/struct/vImageConverterRef //apple_ref/c/intf/vImageConverterRef //apple_ref/doc/anysymbol/vImageConverterRef" machineGenerated="true" --><span class="type">vImageConverterRef</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment" logicalPath="//apple_ref/c/instm/vImageConverter_CreateWithColorSyncCodeFragment //apple_ref/c/clm/vImageConverter_CreateWithColorSyncCodeFragment //apple_ref/c/intfcm/vImageConverter_CreateWithColorSyncCodeFragment //apple_ref/c/intfm/vImageConverter_CreateWithColorSyncCodeFragment //apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment" target="_top"><span class="function">vImageConverter_CreateWithColorSyncCodeFragment</span></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/CFTypeRef //apple_ref/c/tdef/CFTypeRef //apple_ref/c/tag/CFTypeRef //apple_ref/c/struct/CFTypeRef //apple_ref/c/intf/CFTypeRef //apple_ref/doc/anysymbol/CFTypeRef" machineGenerated="true" --><span class="type">CFTypeRef</span><!-- /a --> <span class="param">codeFragment</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" logicalPath="//apple_ref/c/cl/vImage_CGImageFormat //apple_ref/c/tdef/vImage_CGImageFormat" target="_top"><span class="type">vImage_CGImageFormat</span></a> <span class="type">*</span><span class="param">srcFormat</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" logicalPath="//apple_ref/c/cl/vImage_CGImageFormat //apple_ref/c/tdef/vImage_CGImageFormat" target="_top"><span class="type">vImage_CGImageFormat</span></a> <span class="type">*</span><span class="param">destFormat</span>, 
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <span class="type">*</span><span class="param">backgroundColor</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <span class="type">*</span><span class="param">error</span> )  ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/codeFragment;   name=codeFragment -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/codeFragment"></a>
+<code>codeFragment</code>
+</dt>
+<dd><p>A code fragment created with ColorSyncTransformCopyProperty( kColorSyncTransformFullConversionData,
+kColorSyncTransformParametricConversionData or kColorSyncTransformSimplifiedConversionData)
+May be NULL.  If NULL, no colorspace conversion / correction is done. In this case,
+behavior is undefined if the colorspaces do not have the same channel order or have a
+different number of channels or the colorspaces are not from the same family.
+kColorSyncTransformFullConversionData is required for black point compensation.
+CAUTION: vImageConverter_CreateWithColorSyncCodeFragment does not verify that the
+codeFragment is actually appropriate for the srcFormat and destFormat provided. Nor
+does it attempt to append additional color space transformation steps to make the 
+codeFragment appropriate to the images provided. If the colorspace of the srcFormat 
+and destFormat do not correspond to the ColorSyncProfileRefs used to create the 
+ColorSync transform in at least colorspace model, then the behavior is undefined. 
+See CGColorSpaceModel CoreGraphics/CGColorSpace.h</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/srcFormat;   name=srcFormat -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/srcFormat"></a>
+<code>srcFormat</code>
+</dt>
+<dd><p>A pointer to a populated vImage_CGImageFormat struct describing the image format
+of the source image. If the CGColorSpaceRef is NULL, sRGB will be used
+as the default value. The CGColorSpaceRef will be retained by this function. It
+will be released when the vImageConverter is destroyed.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/destFormat;   name=destFormat -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/destFormat"></a>
+<code>destFormat</code>
+</dt>
+<dd><p>A pointer to a populated vImage_CGImageFormat struct describing the image format
+of the destination image. If the CGColorSpaceRef is NULL, sRGB will be
+used as the default value. The CGColorSpaceRef will be retained by this function.
+It will be released when the vImageConverter is destroyed.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/backgroundColor;   name=backgroundColor -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/backgroundColor"></a>
+<code>backgroundColor</code>
+</dt>
+<dd>
+<p>Points to an array of floats to be used as a background color if one is needed. The
+backgroundColor range is assumed to be [0,1]. The channel ordering and number of color
+channels must match the natural order of the destination colorSpace (e.g. RGB or CMYK).
+The backgroundColor may be NULL if no background color is needed.
+</p>
+<p>A background color is used when the image is converted from an alpha-containing format
+to an alpha-none format, in which case the alpha is removed by compositing against the
+opaque background color pointed to by this parameter. If the image is instead converted
+from one alpha containing format to another, then the image will be premultiplied or
+unpremultiplied as necessary and no background color is necessary. (For unpremultiplication,
+the result color value for pixels with alpha 0 is 0.)  Likewise, when converting between
+alpha-none formats, a background color is not use. In the case of kCGImageAlphaNone -&gt;
+kCGImageAlphaNoneSkipFirst/Last, the vacant alpha channel is filled in with 1.0. If NULL
+is passed here, then 0 will be used for the color channels.
+</p>
+<p>The vImageConverter will contain a copy of the data passed in this field.</p>
+</dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>Any of the following flags are allowed:
+</p>
+  <pre>
+           kvImagePrintDiagnosticsToConsole    In the event of a problem, print out some helpful debug
+                                               messages.
+
+           kvImageDoNotTile                    A converter created with this flag will operate as if
+                                               kvImageDoNotTile was passed to vImageConvert_AnyToAny
+                                               whether it was or not.
+   </pre>
+</dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/error;   name=error -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_CreateWithColorSyncCodeFragment/error"></a>
+<code>error</code>
+</dt>
+<dd>
+<p>May be NULL.  If not NULL, then a vImage_Error is returned at the address pointed to by error.
+The vImage_Error will be less than 0 if an error condition occurred. Checking the vImageConverter
+returned to make sure it is non-NULL is sufficient to verify success or failure of the function.
+</p>
+<p>The following error values can occur:
+  </p>
+<pre>
+      kvImageNoError                      Success.
+
+      kvImageNullPointerArgument          srcFormat and/or destFormat is NULL.
+
+      kvImageUnknownFlagsBit              Currently only kvImagePrintDiagnosticsToConsole and kvImageDoNotTile are
+                                          allowed. All other bits in the flags field must be 0.
+
+      kvImageInvalidParameter             backgroundColor is NULL and the conversion needed a backgroundColor
+
+      kvImageInvalidImageFormat           bitsPerComponent must be in {1,2,4,5,8,12,16,32}.
+      kvImageInvalidImageFormat           The base colorspace must be grayscale for destination images using indexed color.
+      kvImageInvalidImageFormat           The colorspace may be indexed color for images only if it is {1,2,4,8} bitsPerComponent
+                                          and kCGImageAlphaNone.
+      kvImageInvalidImageFormat           vImage_CGImageFormat.bitmapInfo &amp; kCGBitmapAlphaInfoMask  does not encode a valid alpha
+      kvImageInvalidImageFormat           floating point formats must be 16 or 32 bits per component. 16-bit floats are
+                                          IEEE-754-2008 binary16 interchange format  (a.k.a. OpenEXR half float). 32-bit floats
+                                          are the standard IEEE-754-2008 binary32 interchange format. (a.k.a float in C/C++/ObjC)
+      kvImageInvalidImageFormat           format-&gt;renderingIntent is not a known value
+      kvImageInvalidImageFormat           The conversion called for conversion to an input-only colorspace. Some color profiles
+                                          (e.g. those arising from a scanner) are described as input only, because the device can
+                                          not produce image output.
+
+      kvImageInvalidImageFormat           codeFragment was found to be otherwise invalid / unusable
+
+      kvImageInternalError                The converter was unable to find a path from the source format to the destination format.
+                                          This should not happen and indicates incorrect operation of the function. Please file a bug.
+                                          The kvImagePrintDiagnosticsToConsole flag will provide additional diagnostic info.
+   </pre>
+
+<p>In cases where the error code is not sufficient to quickly determine the problem, the kvImagePrintDiagnosticsToConsole flag
+should provide additional diagnostic info.</p>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>A vImageConverter object with reference count of 1 is created. If the call fails due to an error, then NULL
+will be returned. Use vImageConverter_Release to release your reference to it and allow the resources used
+by the converter to be returned to the system.
+</p>
+<p>If error is not NULL, an error code will be written to that address on return.
+</p>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment;name=start --><p>vImageConverter_CreateWithColorSyncCodeFragment is like vImageConverter_CreateWithCGImageFormat, except that
+instead of creating its own colorspace transform for any colorspace conversions, it uses the one you pass in.
+This gives you greater control over the fine details of colorspace conversion, for exacting color fidelity.
+The colorspaces for source and destination images must refer to colorspaces that have the same number of channels
+as the codeFragment is designed to accept / produce.
+</p>
+<p>See Apple Sample Code "Converting an Image with Black Point Compensation" https://developer.apple.com/library/mac/samplecode/convertImage/Introduction/Intro.html
+for an example of usage.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_CreateWithColorSyncCodeFragment;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder;   name=vImageConverter_GetDestinationBufferOrder --><a name="//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder"></a>
+<h3><a name="vImageConverter_GetDestinationBufferOrder">vImageConverter_GetDestinationBufferOrder</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder;name=start --><!-- begin abstract --></p>
+<p>Get a list of vImage_Buffer channel names specifying the order of planes
+</p>
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder;name=end -->
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder;name=start --><span class="keyword">const</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImageBufferTypeCode" logicalPath="//apple_ref/c/cl/vImageBufferTypeCode //apple_ref/c/tdef/vImageBufferTypeCode" target="_top"><span class="type">vImageBufferTypeCode</span></a> <span class="type">*</span> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder" logicalPath="//apple_ref/c/instm/vImageConverter_GetDestinationBufferOrder //apple_ref/c/clm/vImageConverter_GetDestinationBufferOrder //apple_ref/c/intfcm/vImageConverter_GetDestinationBufferOrder //apple_ref/c/intfm/vImageConverter_GetDestinationBufferOrder //apple_ref/c/func/vImageConverter_GetDestinationBufferOrder" target="_top"><span class="function">vImageConverter_GetDestinationBufferOrder</span></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/vImageConverterRef //apple_ref/c/tdef/vImageConverterRef //apple_ref/c/tag/vImageConverterRef //apple_ref/c/struct/vImageConverterRef //apple_ref/c/intf/vImageConverterRef //apple_ref/doc/anysymbol/vImageConverterRef" machineGenerated="true" --><span class="type">vImageConverterRef</span><!-- /a --> <span class="param">converter</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_GetDestinationBufferOrder/converter;   name=converter -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_GetDestinationBufferOrder/converter"></a>
+<code>converter</code>
+</dt>
+<dd><p>The conversion for which you wish to know the ordering of source or result buffers.
+converter must be a valid vImageConverterRef.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The function returns a kvImageBufferTypeCode_EndOfList terminated array of buffer type codes. The type codes
+indicate the order that the vImage_Buffers are passed in to vImageConvert_AnyToAny. The array is valid for the
+lifetime of the vImageConverterRef. It belongs to the vImageConverterRef and should not be freed by you.
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder;name=start --><p>These functions describe the identity of each buffer passed in the dests parameters of vImageConvert_AnyToAny,
+to allow you to order the buffers correctly. It is provided for informational purposes, to help wire up image
+processing pipelines to vImage that are not supported through more direct means, CGImages, CVPixelBuffers, the alternative
+handling of which is described at the end of this comment.
+</p>
+<p>Prior to OS X.10 and iOS 8.0, only CG Image formats are handled by vImageConvert_AnyToAny. Had these functions existed
+then, the result would always be {kvImageBufferTypeCode_CGFormat, kvImageBufferTypeCode_EndOfList}
+</p>
+  <pre>
+  Simplified Common Cases
+  -----------------------
+    CGImageRefs:
+      CoreGraphics formats always come as a single buffer, with one or more channels. No buffer ordering is
+      requred. The buffer order is always kvImageBufferTypeCode_CGFormat. Prior to OS X.10 and iOS 8.0, only
+      converters to CG image formats are available, so where these functions are not available, the answer would
+      have always been { kvImageBufferTypeCode_CGFormat, 0}. As a point of trivia, the ordering of the channels
+      within a buffer is by convention as follows:
+
+              number of channels = number of channels in colorspace + (alpha != kCGImageAlphaNone)
+              alpha is either first or last, given by the alpha component of the CGBitmapInfo
+              The ordering of the non-alpha channels is given by the colorspace, e.g. {R,G,B} for a RGB image.
+              For 8-bit images, the ordering of the channels may be reversed according to
+                  kCGBitmapByteOrderLittleEndian32 or kCGBitmapByteOrderLittleEndian16, but
+                  the pixel size must match the endian swap chunk size. This gives you access to formats
+                  like BGRA8888. If the endian is default or big endian, then no swap occurs.
+
+    CVPixelBufferRefs:
+      Though these APIs will work for this purpose, it is expected to be simpler to use vImageBuffer_InitForCopyToCVPixelBuffer
+      or vImageBuffer_InitForCopyFromCVPixelBuffer to set up a vImage_Buffer array for srcs and dests. Pass kvImageDoNotAllocate
+      to have it automatically alias a locked CVPixelBuffer. The conversion will then copy the data right into or out of the
+      CVPixelBuffer without further copying or modification.  (It may still need to be copied out to the GPU, for example, however.)
+
+  </pre>
+
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_GetDestinationBufferOrder;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.10. Available in iOS v8.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers;   name=vImageConverter_GetNumberOfDestinationBuffers --><a name="//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers"></a>
+<h3><a name="vImageConverter_GetNumberOfDestinationBuffers">vImageConverter_GetNumberOfDestinationBuffers</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers;name=start --><!-- begin abstract --></p>
+<p>Get the number of destination buffers written to by the converter.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers;name=start --><span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/long //apple_ref/c/tdef/long //apple_ref/c/tag/long //apple_ref/c/struct/long //apple_ref/c/intf/long //apple_ref/doc/anysymbol/long" machineGenerated="true" --><span class="type">long</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers" logicalPath="//apple_ref/c/instm/vImageConverter_GetNumberOfDestinationBuffers //apple_ref/c/clm/vImageConverter_GetNumberOfDestinationBuffers //apple_ref/c/intfcm/vImageConverter_GetNumberOfDestinationBuffers //apple_ref/c/intfm/vImageConverter_GetNumberOfDestinationBuffers //apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers" target="_top"><span class="function">vImageConverter_GetNumberOfDestinationBuffers</span></a>(
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/vImageConverterRef //apple_ref/c/tdef/vImageConverterRef //apple_ref/c/tag/vImageConverterRef //apple_ref/c/struct/vImageConverterRef //apple_ref/c/intf/vImageConverterRef //apple_ref/doc/anysymbol/vImageConverterRef" machineGenerated="true" --><span class="type">vImageConverterRef</span><!-- /a --> <span class="param">converter</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_GetNumberOfDestinationBuffers/converter;   name=converter -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_GetNumberOfDestinationBuffers/converter"></a>
+<code>converter</code>
+</dt>
+<dd><p>The conversion for which you wish to know the number of result buffers</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>On success, the number of result buffers is returned.  On failure, 0 is returned.
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers;name=start --><p>All formats discribed by a vImage_CGImageFormat just consume one vImage_Buffer
+and produce one vImage_Buffer. There are no multi-plane vImage_CGImageFormats.
+However, some video formats (see vImage/vImage_CVUtilities) have planar
+data formats with data in more than one plane. For such conversions, it may be
+necessary to know how many out buffers are overwritten by a converter.
+</p>
+<p>For older operating systems, where these functions are not available,
+the number of source and destination buffers is always 1.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_GetNumberOfDestinationBuffers;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.10. Available in iOS v8.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers;   name=vImageConverter_GetNumberOfSourceBuffers --><a name="//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers"></a>
+<h3><a name="vImageConverter_GetNumberOfSourceBuffers">vImageConverter_GetNumberOfSourceBuffers</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers;name=start --><!-- begin abstract --></p>
+<p>Get the number of source buffers consumed by the converter.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers;name=start --><span class="keyword">unsigned</span> <!-- a logicalPath="//apple_ref/c/cl/long //apple_ref/c/tdef/long //apple_ref/c/tag/long //apple_ref/c/struct/long //apple_ref/c/intf/long //apple_ref/doc/anysymbol/long" machineGenerated="true" --><span class="type">long</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers" logicalPath="//apple_ref/c/instm/vImageConverter_GetNumberOfSourceBuffers //apple_ref/c/clm/vImageConverter_GetNumberOfSourceBuffers //apple_ref/c/intfcm/vImageConverter_GetNumberOfSourceBuffers //apple_ref/c/intfm/vImageConverter_GetNumberOfSourceBuffers //apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers" target="_top"><span class="function">vImageConverter_GetNumberOfSourceBuffers</span></a>(
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/vImageConverterRef //apple_ref/c/tdef/vImageConverterRef //apple_ref/c/tag/vImageConverterRef //apple_ref/c/struct/vImageConverterRef //apple_ref/c/intf/vImageConverterRef //apple_ref/doc/anysymbol/vImageConverterRef" machineGenerated="true" --><span class="type">vImageConverterRef</span><!-- /a --> <span class="param">converter</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_GetNumberOfSourceBuffers/converter;   name=converter -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_GetNumberOfSourceBuffers/converter"></a>
+<code>converter</code>
+</dt>
+<dd><p>The conversion for which you wish to know the number of source buffers</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>On success, the number of source buffers is returned.  On failure, 0 is returned.
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers;name=start --><p>All formats discribed by a vImage_CGImageFormat just consume one vImage_Buffer
+and produce one vImage_Buffer. There are no multi-plane vImage_CGImageFormats.
+However, some video formats (see vImage/vImage_CVUtilities) have planar 
+data formats with data in more than one plane. For such conversions, it may be
+necessary to know how many input buffers are consumed by a converter.
+</p>
+<p>For older operating systems, where these functions are not available, 
+the number of source and destination buffers is always 1.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_GetNumberOfSourceBuffers;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.10. Available in iOS v8.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageConverter_GetSourceBufferOrder;   name=vImageConverter_GetSourceBufferOrder --><a name="//apple_ref/c/func/vImageConverter_GetSourceBufferOrder"></a>
+<h3><a name="vImageConverter_GetSourceBufferOrder">vImageConverter_GetSourceBufferOrder</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_GetSourceBufferOrder;name=start --><!-- begin abstract --></p>
+<p>Get a list of vImage_Buffer channel names specifying the order of planes
+</p>
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_GetSourceBufferOrder;name=end -->
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_GetSourceBufferOrder;name=start --><span class="keyword">const</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImageBufferTypeCode" logicalPath="//apple_ref/c/cl/vImageBufferTypeCode //apple_ref/c/tdef/vImageBufferTypeCode" target="_top"><span class="type">vImageBufferTypeCode</span></a> <span class="type">*</span> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_GetSourceBufferOrder" logicalPath="//apple_ref/c/instm/vImageConverter_GetSourceBufferOrder //apple_ref/c/clm/vImageConverter_GetSourceBufferOrder //apple_ref/c/intfcm/vImageConverter_GetSourceBufferOrder //apple_ref/c/intfm/vImageConverter_GetSourceBufferOrder //apple_ref/c/func/vImageConverter_GetSourceBufferOrder" target="_top"><span class="function">vImageConverter_GetSourceBufferOrder</span></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/vImageConverterRef //apple_ref/c/tdef/vImageConverterRef //apple_ref/c/tag/vImageConverterRef //apple_ref/c/struct/vImageConverterRef //apple_ref/c/intf/vImageConverterRef //apple_ref/doc/anysymbol/vImageConverterRef" machineGenerated="true" --><span class="type">vImageConverterRef</span><!-- /a --> <span class="param">converter</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_GetSourceBufferOrder;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_GetSourceBufferOrder/converter;   name=converter -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_GetSourceBufferOrder/converter"></a>
+<code>converter</code>
+</dt>
+<dd><p>The conversion for which you wish to know the ordering of source or result buffers.
+converter must be a valid vImageConverterRef.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>The function returns a kvImageBufferTypeCode_EndOfList terminated array of buffer type codes. The type codes
+indicate the order that the vImage_Buffers are passed in to vImageConvert_AnyToAny. The array is valid for the
+lifetime of the vImageConverterRef.  It belongs to the vImageConverterRef and should not be freed by you.
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_GetSourceBufferOrder;name=start --><p>These functions describe the identity of each buffer passed in the srcs parameters of vImageConvert_AnyToAny,
+to allow you to order the buffers correctly. It is provided for informational purposes, to help wire up image 
+processing pipelines to vImage that are not supported through more direct means, CGImages, CVPixelBuffers, the alternative
+handling of which is described at the end of this comment.
+</p>
+<p>Prior to OS X.10 and iOS 8.0, only CG Image formats are handled by vImageConvert_AnyToAny. Had these functions existed
+then, the result would always be {kvImageBufferTypeCode_CGFormat, kvImageBufferTypeCode_EndOfList}
+</p>
+  <pre>
+  Simplified Common Cases
+  -----------------------
+    CGImageRefs:
+      CoreGraphics formats always come as a single buffer, with one or more channels. No buffer ordering is
+      requred. The buffer order is always kvImageBufferTypeCode_CGFormat. Prior to OS X.10 and iOS 8.0, only
+      converters to CG image formats are available, so where these functions are not available, the answer would
+      have always been { kvImageBufferTypeCode_CGFormat, 0}. As a point of trivia, the ordering of the channels
+      within a buffer is by convention as follows:
+
+              number of channels = number of channels in colorspace + (alpha != kCGImageAlphaNone)
+              alpha is either first or last, given by the alpha component of the CGBitmapInfo
+              The ordering of the non-alpha channels is given by the colorspace, e.g. {R,G,B} for a RGB image.
+              For 8-bit images, the ordering of the channels may be reversed according to
+                  kCGBitmapByteOrderLittleEndian32 or kCGBitmapByteOrderLittleEndian16, but
+                  the pixel size must match the endian swap chunk size. This gives you access to formats
+                  like BGRA8888. If the endian is default or big endian, then no swap occurs.
+
+    CVPixelBufferRefs:
+      Though these APIs will work for this purpose, it is expected to be simpler to use vImageBuffer_InitForCopyToCVPixelBuffer
+      or vImageBuffer_InitForCopyFromCVPixelBuffer to set up a vImage_Buffer array for srcs and dests. Pass kvImageDoNotAllocate
+      to have it automatically alias a locked CVPixelBuffer. The conversion will then copy the data right into or out of the
+      CVPixelBuffer without further copying or modification.  (It may still need to be copied out to the GPU, for example, however.)
+
+  </pre>
+
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_GetSourceBufferOrder;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.10. Available in iOS v8.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace;   name=vImageConverter_MustOperateOutOfPlace --><a name="//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace"></a>
+<h3><a name="vImageConverter_MustOperateOutOfPlace">vImageConverter_MustOperateOutOfPlace</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace;name=start --><!-- begin abstract --></p>
+<p>Determine whether a converter is capable of operating in place. 
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace;name=start --><a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace" logicalPath="//apple_ref/c/instm/vImageConverter_MustOperateOutOfPlace //apple_ref/c/clm/vImageConverter_MustOperateOutOfPlace //apple_ref/c/intfcm/vImageConverter_MustOperateOutOfPlace //apple_ref/c/intfm/vImageConverter_MustOperateOutOfPlace //apple_ref/c/func/vImageConverter_MustOperateOutOfPlace" target="_top"><span class="function">vImageConverter_MustOperateOutOfPlace</span></a>(
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/vImageConverterRef //apple_ref/c/tdef/vImageConverterRef //apple_ref/c/tag/vImageConverterRef //apple_ref/c/struct/vImageConverterRef //apple_ref/c/intf/vImageConverterRef //apple_ref/doc/anysymbol/vImageConverterRef" machineGenerated="true" --><span class="type">vImageConverterRef</span><!-- /a --> <span class="param">converter</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">srcs</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">dests</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span>)  ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_MustOperateOutOfPlace/converter;   name=converter -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_MustOperateOutOfPlace/converter"></a>
+<code>converter</code>
+</dt>
+<dd><p>The converter to check</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_MustOperateOutOfPlace/srcs;   name=srcs -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_MustOperateOutOfPlace/srcs"></a>
+<code>srcs</code>
+</dt>
+<dd><p>The list of source buffers you plan to use with vImageConvert_AnyToAny. May be NULL.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_MustOperateOutOfPlace/dests;   name=dests -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_MustOperateOutOfPlace/dests"></a>
+<code>dests</code>
+</dt>
+<dd><p>The list of destination buffers you plan to use with vImageConvert_AnyToAny. May be NULL.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_MustOperateOutOfPlace/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_MustOperateOutOfPlace/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The flags you plan to pass to vImageConvert_AnyToAny.
+</p>
+  <pre>
+                              Note: in the case of kvImagePrintDiagnosticsToConsole, the flag means print
+                              error information to the console for errors caught by vImageConverter_MustOperateOutOfPlace,  
+                              not vImageConvert_AnyToAny. At times, vImageConverter_MustOperateOutOfPlace may fail because 
+                              it detects an error condition that would cause vImageConvert_AnyToAny to fail.
+   </pre>
+</dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>Error Codes:
+  </p>
+<pre>
+      kvImageNoError                      In-place operation will work
+      kvImageNullPointerArgument          The converter may not be NULL
+      kvImageNullPointerArgument          srcs and dests must either both be NULL or neither must be NULL. 
+      kvImageInvalidParameter             The converter is invalid
+      kvImageUnknownFlagsBit              An unknown / unsupported flag was used
+      kvImageOutOfPlaceOperationRequired  vImageConvert_AnyToAny requires separate buffers be used for this operation
+   </pre>
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace;name=start --><p>Some conversions will work if the src and destination image buffer
+scanlines start at the same address. Others will not. In such cases, 
+you need to allocate additional storage to hold the destination buffer.
+This function returns kvImageOutOfPlaceOperationRequired if the conversion 
+requires out of place operation. 
+</p>
+  <pre>
+       In-place operation is considered to mean srcs[i].data = dests[i].data
+       and srcs[i].rowBytes = dests[i].rowBytes. Other styles of partial buffer
+       overlap produce undefined behavior.
+   </pre>
+
+<p>The list of source and destination buffers is optional. Results are as follows:
+</p>
+  <pre>
+      srcs = dests = NULL         kvImageNoError if any conversion with this converter is guaranteed to work in place,
+                                  provided that srcs[i].data = dests[i].data and srcs[i].rowBytes = dests[i].rowBytes.
+                                  If there exists at least one combination of height and width for which in place operation
+                                  is not possible with this converter, then kvImageOutOfPlaceOperationRequired will be returned. 
+
+      srcs != NULL, dests = NULL  kvImageNullPointerArgument
+      srcs = NULL, dests != NULL  kvImageNullPointerArgument
+  
+      srcs != NULL, dests != NULL kvImageNoError if the conversion will successfully operate in place for this particular 
+                                  combination of heights, widths and rowBytes. In this case, vImage does not check to see if the 
+                                  buffers overlap. It presumes that srcs[i].data = dests[i].data.  This is intended to allow 
+                                  you to defer allocation until later.  If in place operation will not work, then 
+                                  kvImageOutOfPlaceOperationRequired is returned. 
+   </pre>
+
+<p>In no case during this function call does vImage examine the contents of the memory pointed to by srcs[i].data or dests[i].data. 
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_MustOperateOutOfPlace;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageConverter_Release;   name=vImageConverter_Release --><a name="//apple_ref/c/func/vImageConverter_Release"></a>
+<h3><a name="vImageConverter_Release">vImageConverter_Release</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_Release;name=start --><!-- begin abstract --></p>
+<p>Release a vImageConverterRef
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_Release;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_Release;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_Release" logicalPath="//apple_ref/c/instm/vImageConverter_Release //apple_ref/c/clm/vImageConverter_Release //apple_ref/c/intfcm/vImageConverter_Release //apple_ref/c/intfm/vImageConverter_Release //apple_ref/c/func/vImageConverter_Release" target="_top"><span class="function">vImageConverter_Release</span></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/vImageConverterRef //apple_ref/c/tdef/vImageConverterRef //apple_ref/c/tag/vImageConverterRef //apple_ref/c/struct/vImageConverterRef //apple_ref/c/intf/vImageConverterRef //apple_ref/doc/anysymbol/vImageConverterRef" machineGenerated="true" --><span class="type">vImageConverterRef</span><!-- /a --> <span class="param">converter</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_Release;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_Release/converter;   name=converter -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_Release/converter"></a>
+<code>converter</code>
+</dt>
+<dd><p>The vImageConverter to release. If NULL, then nothing happens.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_Release;name=start --><p>If the retain count of a vImageConverterRef becomes zero, the memory allocated to the 
+object is deallocated and the object is destroyed. If you create or explicitly
+retain (see the vImageConverter_Retain function) a vImageConverterRef, you are responsible for
+releasing it when you no longer need it (see Memory Management Programming Guide for Core Foundation).
+</p>
+<p>Like all of vImage, this interface is thread safe and may be called reentrantly.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_Release;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageConverter_Retain;   name=vImageConverter_Retain --><a name="//apple_ref/c/func/vImageConverter_Retain"></a>
+<h3><a name="vImageConverter_Retain">vImageConverter_Retain</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_Retain;name=start --><!-- begin abstract --></p>
+<p>Retain a vImageConverterRef
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageConverter_Retain;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_Retain;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageConverter_Retain" logicalPath="//apple_ref/c/instm/vImageConverter_Retain //apple_ref/c/clm/vImageConverter_Retain //apple_ref/c/intfcm/vImageConverter_Retain //apple_ref/c/intfm/vImageConverter_Retain //apple_ref/c/func/vImageConverter_Retain" target="_top"><span class="function">vImageConverter_Retain</span></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/vImageConverterRef //apple_ref/c/tdef/vImageConverterRef //apple_ref/c/tag/vImageConverterRef //apple_ref/c/struct/vImageConverterRef //apple_ref/c/intf/vImageConverterRef //apple_ref/doc/anysymbol/vImageConverterRef" machineGenerated="true" --><span class="type">vImageConverterRef</span><!-- /a --> <span class="param">converter</span> ) ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageConverter_Retain;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageConverter_Retain/converter;   name=converter -->
+<a name="//apple_ref/doc/functionparam/vImageConverter_Retain/converter"></a>
+<code>converter</code>
+</dt>
+<dd><p>The vImageConverter to retain. If NULL, then nothing happens.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_Retain;name=start --><p>You should retain a vImageConverterRef when you receive it from elsewhere (that is, you did not 
+create or copy it) and you want it to persist. If you retain a vImageConverterRef you are responsible 
+for releasing it (see Memory Management Programming Guide for Core Foundation).
+</p>
+<p>Like all of vImage, this interface is thread safe and may be called reentrantly.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageConverter_Retain;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/vImageCreateCGImageFromBuffer;   name=vImageCreateCGImageFromBuffer --><a name="//apple_ref/c/func/vImageCreateCGImageFromBuffer"></a>
+<h3><a name="vImageCreateCGImageFromBuffer">vImageCreateCGImageFromBuffer</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageCreateCGImageFromBuffer;name=start --><!-- begin abstract --></p>
+<p>Create a CGImageRef from a vImage_Buffer.
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/func/vImageCreateCGImageFromBuffer;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageCreateCGImageFromBuffer;name=start --><!-- a logicalPath="//apple_ref/c/cl/CGImageRef //apple_ref/c/tdef/CGImageRef //apple_ref/c/tag/CGImageRef //apple_ref/c/struct/CGImageRef //apple_ref/c/intf/CGImageRef //apple_ref/doc/anysymbol/CGImageRef" machineGenerated="true" --><span class="type">CGImageRef</span><!-- /a --> <a machinegenerated="true" href="index.html#//apple_ref/c/func/vImageCreateCGImageFromBuffer" logicalPath="//apple_ref/c/instm/vImageCreateCGImageFromBuffer //apple_ref/c/clm/vImageCreateCGImageFromBuffer //apple_ref/c/intfcm/vImageCreateCGImageFromBuffer //apple_ref/c/intfm/vImageCreateCGImageFromBuffer //apple_ref/c/func/vImageCreateCGImageFromBuffer" target="_top"><span class="function">vImageCreateCGImageFromBuffer</span></a>(
+    <span class="keyword">const</span> <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Buffer" logicalPath="//apple_ref/c/cl/vImage_Buffer //apple_ref/c/tdef/vImage_Buffer" target="_top"><span class="type">vImage_Buffer</span></a> <span class="type">*</span><span class="param">buf</span>, 
+    <span class="keyword">const</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" logicalPath="//apple_ref/c/cl/vImage_CGImageFormat //apple_ref/c/tdef/vImage_CGImageFormat" target="_top"><span class="type">vImage_CGImageFormat</span></a> <span class="type">*</span><span class="param">format</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> (<span class="type">*</span><span class="param">callback</span>)(
+        <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">userData</span>,
+        <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">buf_data</span>), 
+    <!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <span class="type">*</span><span class="param">userData</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/c/tdef/vImage_Flags" logicalPath="//apple_ref/c/cl/vImage_Flags //apple_ref/c/tdef/vImage_Flags" target="_top"><span class="type">vImage_Flags</span></a> <span class="param">flags</span>, 
+    <a machinegenerated="true" href="../vImage_Types_h/index.html#//apple_ref/doc/title:tdef/vImage_Error" logicalPath="//apple_ref/c/cl/vImage_Error //apple_ref/c/tdef/vImage_Error //apple_ref/c/tag/vImage_Error //apple_ref/c/struct/vImage_Error //apple_ref/c/intf/vImage_Error //apple_ref/doc/anysymbol/vImage_Error" target="_top"><span class="type">vImage_Error</span></a> <span class="type">*</span><span class="param">error</span> )  ;  <!-- headerDoc=declaration;uid=//apple_ref/c/func/vImageCreateCGImageFromBuffer;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/buf;   name=buf -->
+<a name="//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/buf"></a>
+<code>buf</code>
+</dt>
+<dd><p>The vImage_Buffer from which to make the CGImageRef</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/format;   name=format -->
+<a name="//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/format"></a>
+<code>format</code>
+</dt>
+<dd><p>The image format of the vImage_Buffer. format may not be NULL.  format-&gt;colorspace may be NULL,
+in which case sRGB will be used.  The colorspace is retained as needed by the new CGImage.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/callback;   name=callback -->
+<a name="//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/callback"></a>
+<code>callback</code>
+</dt>
+<dd>
+<p>In no-copy mode, this callback is called to destroy the buf-&gt;data when the CGImageRef no longer needs it.
+If NULL is passed for the callback, then free() will be used to destroy buf-&gt;data.  userData will be 
+passed to the callback function as the userData parameter and buf-&gt;data passed as the buf_data parameter.
+</p>
+<p>This parameter has no effect if kvImageNoAllocate is not in flags. 
+</p>
+<p>The callback may be called at any time from any thread. It is possible for it to be called before 
+vImageCreateCGImageFromBuffer returns.  
+</p>
+<p>The callback will not be called if the returned CGImageRef is NULL.</p>
+</dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/userData;   name=userData -->
+<a name="//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/userData"></a>
+<code>userData</code>
+</dt>
+<dd><p>The value to pass to the callbacks userData parameter. If callback is NULL or kvImageNoAllocate
+is passed in flags, this value is ignored.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/flags;   name=flags -->
+<a name="//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/flags"></a>
+<code>flags</code>
+</dt>
+<dd>
+<p>The following flags are allowed:
+  </p>
+<pre>
+                  kvImageNoAllocate                   Causes vImageCreateCGImageFromBuffer to run in no-copy mode.
+                                                      Ownership of the memory pointed to by buf-&gt;data is transferred 
+                                                      to the CGImageRef.  You'll need to set up a callback and userData
+                                                      to manage releasing the memory back to the system when the CGImage
+                                                      is done with it.
+
+                  kvImagePrintDiagnosticsToConsole    In the event of a problem, print out some helpful debug messages.
+
+                  kvImageHighQualityResampling        Sometimes the system will ask for the image to be resamled to
+                                                      a smaller size. If that happens vImageAffineWarp_&lt;fmt&gt;" will be
+                                                      called. In that case, the value of this bit will be used to
+                                                      determine whether Lanczos3 or Lanczos5 resampling is used.
+
+                  kvImageDoNotTile                    Disables multithreading in any conversions that need to be done.
+                                                      Since it seems likely any such conversions will not be running in
+                                                      the context of your tiling engine (if you wrote one) in this case, 
+                                                      this flag is probably counterproductive in this context. Conversions
+                                                      can happen later, after this call returns, when the image is drawn.
+   </pre>
+</dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/error;   name=error -->
+<a name="//apple_ref/doc/functionparam/vImageCreateCGImageFromBuffer/error"></a>
+<code>error</code>
+</dt>
+<dd><p>if not NULL, points to a more informative error code to describe what went wrong on exit. May be NULL.
+Testing the result against NULL is sufficient to detect success or failure. kvImagePrintDiagnosticsToConsole
+is another way to get error information.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>On success, the returned CGImageRef will be non-NULL. If error is not NULL, kvImageNoError will be written there.
+On failure, NULL will be returned, and if error is not NULL, a more informative error code will be written there. 
+</p>
+  <pre>
+  Error Values:
+      kvImageUnknownFlagsBit              flags was not from the list described in the flags parameter above
+      kvImageMemoryAllocationError        Not enough memory to allocate the new CGImageRef
+      kvImageInvalidParameter             format-&gt;bitmapInfo has unknown bits set
+      kvImageInvalidParameter             format-&gt;bitsPerComponent is not in {5,8,16,32}
+      kvImageInvalidImageFormat           format-&gt;renderingIntent is not a known value
+      kvImageNullPointerArgument          format may not be NULL
+      kvImageNullPointerArgument          buf may not be NULL
+   </pre>
+
+
+<!-- end return value --><h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageCreateCGImageFromBuffer;name=start --><p>This function creates a CGImageRef using the image data in a vImage_Buffer. The CGImageRef has a retain count of 1.
+By default, a copy of the image data is made. This allows the function to convert to a CG-friendly format as necessary
+and allows you to continue to use the vImage_Buffer without causing problems for the CGImageRef. 
+</p>
+  <pre>
+ No copy mode
+ ------------
+ When the kvImageNoAllocate flag is passed, then "no-copy" operation is said to occur. Ownership of the memory region  
+ pointed to by buf-&gt;data is transferred to the CGImageRef and it becomes private to and owned by that object and will 
+ be used without modification. The memory region pointed to by buf-&gt;data will be destroyed when the CGImageRef is 
+ destroyed. Caution: CGImageRefs are defined to be immutable once created. Behavior is undefined if you create
+ a CGImageRef then modify the pixels in its backing store.
+
+ No-copy mode can be a little fussy about formats. When a format is rejected, kvImageInvalidImageFormat will be returned. 
+ Formats that are likely to succeed are 8-bit unsigned, 16-bit unsigned and 32-bit floating-point. The image should be 
+ kCGImageAlphaNone, kCGImageAlphaLast, kCGImageAlphaPremultipliedLast or kCGImageAlphaNoneSkipLast, and decode = NULL. 
+ The image should be in host endian mode. This is kCGBitmapByteOrderDefault for 8-bit per component images, and or larger 
+ types, the endianness is given by the endianness of the host system and the size is given by the size of the pixel 
+ (bitsPerComponent &lt; 8) or channel (bitsPerComponent &gt; 8). For example RGB565 data should be kCGBitmapByteOrder16Little 
+ and 32-bit floating point data should be kCGBitmapByteOrder32Little on little endian processors. 
+
+ It is recommended that if no-copy mode fails, that you try again without the kvImageNoAllocate flag. The call probably 
+ will succeed.
+   </pre>
+
+<p>CGImage Debugging Note:
+The format parameter describes the image data you pass in, but there is no requirement that this is the
+format that is actually used to represent the image data held by the CGImage. You should be able to get
+back the data in any format you like with vImageBuffer_InitWithCGImage. However, understand that if you
+request the data through another API like CGDataProviderCopyData(), it will be formatted as described by
+that API -- for CGDataProviderCopyData(), that would be as described by: CGImageGetBitmapInfo, CGImageGetDecode,
+CGImageGetRenderingIntent, CGImageGetColorSpace, CGImageGetBytesPerRow, CGImageGetBitsPerPixel,
+CGImageGetBitsPerComponent, etc.  Furthermore, the format that those APIs report is also not necessarily
+the format of the data held by the CGImageRef.  Common image data consumers like CoreAnimation and
+CoreGraphics have their format preferences and vImage caters to them in order to deliver good performance.
+</p>
+<p>CGImageRefs can also be made from vImage_Buffers using CGImageCreate() and CGDataProviderCreateWithData().
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/vImageCreateCGImageFromBuffer;name=end --><!-- end discussion -->
+<dl>
+<dt><b>Availability</b></dt>
+<dd> Available in Mac OS X v10.9. Available in iOS v7.0.</dd>
+</dl>
+<hr class="betweenSections">
+<a name="HeaderDoc_constants"></a>
+<h2 class="h2tight">Constants</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/c/data/kvImageDecodeArray_16Q12Format" target="_top">kvImageDecodeArray_16Q12Format</a></tt></dt>
+<dd><p>Predefined decode array constant to use with 16Q12 formatted data
+</p></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=data;  uid=//apple_ref/c/data/kvImageDecodeArray_16Q12Format;   name=kvImageDecodeArray_16Q12Format --><a name="//apple_ref/c/data/kvImageDecodeArray_16Q12Format"></a>
+<h3><a name="kvImageDecodeArray_16Q12Format">kvImageDecodeArray_16Q12Format</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/data/kvImageDecodeArray_16Q12Format;name=start --><!-- begin abstract --></p>
+<p>Predefined decode array constant to use with 16Q12 formatted data
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/data/kvImageDecodeArray_16Q12Format;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/data/kvImageDecodeArray_16Q12Format;name=start --><span class="keyword">extern</span> <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <span class="type">*</span> <a machinegenerated="true" href="index.html#//apple_ref/c/data/kvImageDecodeArray_16Q12Format" logicalPath="//apple_ref/c/econst/kvImageDecodeArray_16Q12Format //apple_ref/c/data/kvImageDecodeArray_16Q12Format" target="_top"><span class="var">kvImageDecodeArray_16Q12Format</span></a>;  <!-- headerDoc=declaration;uid=//apple_ref/c/data/kvImageDecodeArray_16Q12Format;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/data/kvImageDecodeArray_16Q12Format;name=start --><p>16Q12 data is a signed 16-bit fixed point integer. The format is implicitly divided by 2**12
+to give a range of [-8,8)  (SHRT_MIN/4096,SHRT_MAX/4096). The type is present to allow 
+8-bit content to be converted into other colorspaces and operated on without undue
+loss of precision or loss of color gamut due to clamping. This constant is "magic" in the
+sense that it is identified by address. Copying the values here will cause a CG format to
+be instead interpreted as a _unsigned_ 16 bit format. 
+</p>
+<p>16Q12 pixels do not follow CG image format conventions in two respects. The format is signed.
+The alpha channel is subject to the decode array transform too, meaning that 0 is transparent 
+and 4096 opaque. Consequently, ALL buffers that use this format must be tagged with the 
+kvImageDecodeArray_16Q12Format decode array.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/data/kvImageDecodeArray_16Q12Format;name=end --><!-- end discussion -->
+<hr class="betweenSections">
+<a name="HeaderDoc_datatypes"></a>
+<h2 class="h2tight">Typedefs</h2>
+<dl>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" target="_top">vImage_CGImageFormat</a></tt></dt>
+<dd><p>A pixel format
+</p></dd>
+<dt><tt><a href="index.html#//apple_ref/c/tdef/vImageBufferTypeCode" target="_top">vImageBufferTypeCode</a></tt></dt>
+<dd>
+<p>Type codes for what is in a vImage_Buffer, such as red or luminance or chunky
+</p>
+</dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/vImage_CGImageFormat;   name=vImage_CGImageFormat --><a name="//apple_ref/c/tdef/vImage_CGImageFormat"></a>
+<h3><a name="vImage_CGImageFormat">vImage_CGImageFormat</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/vImage_CGImageFormat;name=start --><!-- begin abstract --></p>
+<p>A pixel format
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/vImage_CGImageFormat;name=end --></p>
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/vImage_CGImageFormat;name=start --><span class="keyword">typedef</span> <span class="keyword">struct</span> <a machinegenerated="true" href="index.html#//apple_ref/c/tdef/vImage_CGImageFormat" logicalPath="//apple_ref/c/cl/vImage_CGImageFormat //apple_ref/c/tdef/vImage_CGImageFormat" target="_top"><span class="type">vImage_CGImageFormat</span></a> { 
+    <!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/bitsPerComponent //apple_ref/c/data/bitsPerComponent //apple_ref/c/clconst/bitsPerComponent " machineGenerated="true" --><span class="var">bitsPerComponent</span><!-- /a -->; 
+    <!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/bitsPerPixel //apple_ref/c/data/bitsPerPixel //apple_ref/c/clconst/bitsPerPixel " machineGenerated="true" --><span class="var">bitsPerPixel</span><!-- /a -->; 
+    <!-- a logicalPath="//apple_ref/c/cl/CGColorSpaceRef //apple_ref/c/tdef/CGColorSpaceRef //apple_ref/c/tag/CGColorSpaceRef //apple_ref/c/struct/CGColorSpaceRef //apple_ref/c/intf/CGColorSpaceRef //apple_ref/doc/anysymbol/CGColorSpaceRef" machineGenerated="true" --><span class="type">CGColorSpaceRef</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/colorSpace //apple_ref/c/data/colorSpace //apple_ref/c/clconst/colorSpace " machineGenerated="true" --><span class="var">colorSpace</span><!-- /a -->; 
+    <!-- a logicalPath="//apple_ref/c/cl/CGBitmapInfo //apple_ref/c/tdef/CGBitmapInfo //apple_ref/c/tag/CGBitmapInfo //apple_ref/c/struct/CGBitmapInfo //apple_ref/c/intf/CGBitmapInfo //apple_ref/doc/anysymbol/CGBitmapInfo" machineGenerated="true" --><span class="type">CGBitmapInfo</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/bitmapInfo //apple_ref/c/data/bitmapInfo //apple_ref/c/clconst/bitmapInfo " machineGenerated="true" --><span class="var">bitmapInfo</span><!-- /a -->; 
+    <!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/version //apple_ref/c/data/version //apple_ref/c/clconst/version " machineGenerated="true" --><span class="var">version</span><!-- /a -->; 
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/CGFloat //apple_ref/c/tdef/CGFloat //apple_ref/c/tag/CGFloat //apple_ref/c/struct/CGFloat //apple_ref/c/intf/CGFloat //apple_ref/doc/anysymbol/CGFloat" machineGenerated="true" --><span class="type">CGFloat</span><!-- /a --> <span class="type">*</span><!-- a logicalPath="//apple_ref/c/econst/decode //apple_ref/c/data/decode //apple_ref/c/clconst/decode " machineGenerated="true" --><span class="var">decode</span><!-- /a -->; 
+    <!-- a logicalPath="//apple_ref/c/cl/CGColorRenderingIntent //apple_ref/c/tdef/CGColorRenderingIntent //apple_ref/c/tag/CGColorRenderingIntent //apple_ref/c/struct/CGColorRenderingIntent //apple_ref/c/intf/CGColorRenderingIntent //apple_ref/doc/anysymbol/CGColorRenderingIntent" machineGenerated="true" --><span class="type">CGColorRenderingIntent</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/renderingIntent //apple_ref/c/data/renderingIntent //apple_ref/c/clconst/renderingIntent " machineGenerated="true" --><span class="var">renderingIntent</span><!-- /a -->; 
+}<!-- a logicalPath="//apple_ref/c/econst/vImage_CGImageFormat //apple_ref/c/data/vImage_CGImageFormat //apple_ref/c/clconst/vImage_CGImageFormat " machineGenerated="true" --><span class="var">vImage_CGImageFormat</span><!-- /a -->;  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/vImage_CGImageFormat;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Fields</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/vImage_CGImageFormat/bitsPerComponent;   name=bitsPerComponent -->
+<a name="//apple_ref/doc/structfield/vImage_CGImageFormat/bitsPerComponent"></a>
+<code>bitsPerComponent</code>
+</dt>
+<dd><p>The number of bits needed to represent one channel of data in one pixel. For ARGB8888, this would be 8. Expected values: {1, 2, 4, 5, 8, 10, 12, 16, 32}</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/vImage_CGImageFormat/bitsPerPixel;   name=bitsPerPixel -->
+<a name="//apple_ref/doc/structfield/vImage_CGImageFormat/bitsPerPixel"></a>
+<code>bitsPerPixel</code>
+</dt>
+<dd><p>The number of bits needed to represent one pixel. For ARGB8888, this would be 32.
+It is possible that bitsPerPixel &gt; bitsPerComponent * number of components, but in practice this is rare.
+The number of color components is given by the colorspace and the number of alpha components (0 or 1) is given by
+by the bitmapInfo.</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/vImage_CGImageFormat/colorSpace;   name=colorSpace -->
+<a name="//apple_ref/doc/structfield/vImage_CGImageFormat/colorSpace"></a>
+<code>colorSpace</code>
+</dt>
+<dd><p>A description of how the pixel data in the image is positioned relative to a reference XYZ color space.
+See CoreGraphics/CGColorSpace.h.  Pass NULL as a shorthand for sRGB. The vImage_CGImageFormat is not
+capable of managing the memory held by the colorSpace. If you created the colorspace, you must
+be sure to release it before all references to it disappear from scope.</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/vImage_CGImageFormat/bitmapInfo;   name=bitmapInfo -->
+<a name="//apple_ref/doc/structfield/vImage_CGImageFormat/bitmapInfo"></a>
+<code>bitmapInfo</code>
+</dt>
+<dd><p>The CGBitmapInfo describing the color channels. See CoreGraphics/CGImage.h.
+ARGB8888 is kCGImageAlphaFirst | kCGBitmapByteOrderDefault
+BGRA8888 is kCGImageAlphaFirst | kCGBitmapByteOrder32Little</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/vImage_CGImageFormat/version;   name=version -->
+<a name="//apple_ref/doc/structfield/vImage_CGImageFormat/version"></a>
+<code>version</code>
+</dt>
+<dd><p>The struct is versioned for future expansion.  Pass 0 here.</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/vImage_CGImageFormat/decode;   name=decode -->
+<a name="//apple_ref/doc/structfield/vImage_CGImageFormat/decode"></a>
+<code>decode</code>
+</dt>
+<dd><p>Prior to transformations caused by the colorspace, color channels are subject to a linear transformation.
+This allows for a different range than the typical [0,1.0]. NULL indicates default behavior of [0,1.0]
+range, and is what you should use if you don't understand this parameter. See description of CGImageCreate()
+for a discussion of decode arrays. See also Decode Arrays section of Chapter 4.8 of the PDF specification.
+The vImage_CGImageFormat is not capable of managing the memory held by the decode array. If you created a
+decode array on the heap, you must be sure to release it before all references to it disappear from scope.</p></dd>
+<dt>
+<!-- headerDoc=structfield;  uid=//apple_ref/doc/structfield/vImage_CGImageFormat/renderingIntent;   name=renderingIntent -->
+<a name="//apple_ref/doc/structfield/vImage_CGImageFormat/renderingIntent"></a>
+<code>renderingIntent</code>
+</dt>
+<dd><p>See CGColorSpace.h. kCGRenderingIntentDefault is typical here. By convention, rendering intent changes that
+are not accompanied by a colorspace change are ignored.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/tdef/vImage_CGImageFormat;name=start --><p>A vImage_CGImageFormat describes the ordering of the color channels, how many there are,
+the size and type of the data in the color channels and whether the data is premultiplied by alpha or not.
+This format mirrors the image format descriptors used by CoreGraphics to create things like CGImageRef and
+CGBitmapContextRef.
+</p>
+<p>This vImage_CGImageFormat:
+</p>
+  <pre>
+      vImage_CGImageFormat format = {
+          .bitsPerComponent = 8,
+          .bitsPerPixel = 32,
+          .colorSpace = CGColorSpaceCreateDeviceRGB(),                                    // don't forget to release this!
+          .bitmapInfo = kCGImageAlphaPremultipliedFirst | kCGBitmapByteOrder32Little,
+          .version = 0,                                                                   // must be 0
+          .decode = NULL,
+          .renderingIntent = kCGRenderingIntentDefault
+      };
+  </pre>
+
+<p>codes for a little endian ARGB8888 pixel, or what is called in the rest of vImage, BGRA8888. Note: for 16-
+and 32-bits per component formats (int16_t, uint16_t, half-float, float) most vImage image filters assume
+the data is in host-endian format. (The APIs in this header do not.) Host-endian is little endian for Intel
+and ARM, big endian for PowerPC. If the data is not in host-endian format, then you may use
+vImagePermuteChannels_ARGB8888 or vImageByteSwap_Planar16U to swap the image data byte ordering.
+</p>
+<p>Some examples:
+  </p>
+<pre>
+      ARGB8888     -&gt;  {8, 32, NULL, alpha first, 0, NULL, kCGRenderingIntentDefault}     alpha first = { kCGImageAlphaFirst, kCGImageAlphaPremultipliedFirst, kCGImageAlphaNoneSkipFirst }
+      RGBA8888     -&gt;  {8, 32, NULL, alpha last,  0, NULL, kCGRenderingIntentDefault}     alpha last  = { kCGImageAlphaLast,  kCGImageAlphaPremultipliedLast,  kCGImageAlphaNoneSkipLast }
+      BGRA8888     -&gt;  {8, 32, NULL, alpha first | kCGBitmapByteOrder32Little, 0, NULL, kCGRenderingIntentDefault}
+      RGB888       -&gt;  {8, 24, NULL, kCGImageAlphaNone | kCGBitmapByteOrderDefault, 0, NULL, kCGRenderingIntentDefault}
+      RGB565       -&gt;  {5, 16, NULL, kCGImageAlphaNone | kCGBitmapByteOrder16Little, 0, NULL, kCGRenderingIntentDefault}
+      ARGB1555     -&gt;  {5, 16, NULL, alpha first | kCGBitmapByteOrder16Little, 0, NULL, kCGRenderingIntentDefault}
+      RGBA16F      -&gt;  {16, 64, NULL, alpha last | kCGBitmapFloatComponents | kCGBitmapByteOrder16Little, 0, NULL, kCGRenderingIntentDefault }
+      CMYK8888     -&gt;  {8, 32, CGColorSpaceCreateDeviceCMYK(), kCGImageAlphaNone, 0, NULL, kCGRenderingIntentDefault  }
+      ARGBFFFF premultiplied    -&gt;  {32, 128, NULL, kCGImageAlphaPremultipliedFirst | kCGBitmapFloatComponents | kCGBitmapByteOrder32Little, 0, NULL, kCGRenderingIntentDefault }
+      ARGBFFFF not-premultiplied -&gt; {32, 128, NULL, kCGImageAlphaFirst | kCGBitmapFloatComponents | kCGBitmapByteOrder32Little, 0, NULL, kCGRenderingIntentDefault }
+      ARGBFFFF, alpha = 1 -&gt;        {32, 128, NULL, kCGImageAlphaNoneSkipFirst | kCGBitmapFloatComponents | kCGBitmapByteOrder32Little, 0, NULL, kCGRenderingIntentDefault }
+  </pre>
+
+<p>Note that some of these formats, particularly RGB565 and 16F formats are supported by vImage but
+not necessarily CoreGraphics. They will be converted to a higher precision format as necessary by
+vImage in vImageCreateCGImageFromBuffer().
+</p>
+<p>By C rules, uninitialized struct parameters are set to zero. The last three parameters are usually zero, so can usually be omitted.
+</p>
+  <pre>
+      vImage_CGImageFormat srgb888 = (vImage_CGImageFormat){
+          .bitsPerComponent = 8,
+          .bitsPerPixel = 24,
+          .colorSpace = NULL,
+          .bitmapInfo = kCGImageAlphaNone | kCGBitmapByteOrderDefault };
+  </pre>
+
+<p>To understand how these various parameters relate to one another, we can look at the process of converting from
+one vImage_CGImageFormat format to another:
+</p>
+<ol start="1">
+<li><p> transform endianness of src format given by bitmapInfo to host endian  (except 8 bitPerComponent content)
+</p></li>
+<li><p> remove decode array transformation, and up convert to a higher range format as necessary to preserve precision / range
+</p></li>
+<li><p> convert src colorspace to reference XYZ colorspace (may cause upconvert to preserve range / precision)
+</p></li>
+<li><p> convert XYZ to destination colorspace + rendering intent
+</p></li>
+<li><p> convert to destination precision (given by bitsPerComponent)
+</p></li>
+<li><p> deal with any alpha changes (given by bitmapInfo) or flattening that needs to occur
+</p></li>
+<li><p> Apply any channel reordering requested, if it didn't happen at an earlier step. (As indicated by src and dest bitmapInfo)
+</p></li>
+<li><p> Apply destination decode array
+</p></li>
+<li><p> Apply endianness transform given by dest bitmapInfo
+</p></li>
+</ol>
+<p>Clearly, for most common transformations not all steps need to occur and multiple steps can be collapsed into a compound operation.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/tdef/vImage_CGImageFormat;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/vImageBufferTypeCode;   name=vImageBufferTypeCode --><a name="//apple_ref/c/tdef/vImageBufferTypeCode"></a>
+<h3><a name="vImageBufferTypeCode">vImageBufferTypeCode</a></h3>
+<hr class="afterName">
+<p><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/vImageBufferTypeCode;name=start --><!-- begin abstract --></p>
+<p>Type codes for what is in a vImage_Buffer, such as red or luminance or chunky
+</p>
+<!-- end abstract --><!-- headerDoc=abstract;uid=//apple_ref/c/tdef/vImageBufferTypeCode;name=end -->
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/vImageBufferTypeCode;name=start --><span class="keyword">typedef</span>  { 
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_EndOfList //apple_ref/c/tdef/kvImageBufferTypeCode_EndOfList //apple_ref/c/tag/kvImageBufferTypeCode_EndOfList //apple_ref/c/struct/kvImageBufferTypeCode_EndOfList //apple_ref/c/intf/kvImageBufferTypeCode_EndOfList //apple_ref/doc/anysymbol/kvImageBufferTypeCode_EndOfList" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_EndOfList</span><!-- /a --> = <span class="number">0</span>,  <span class="comment">/* planar formats -- each buffer contains a single color channel, arising from an image described by a colorspace */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel1 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel1</span><!-- /a -->, <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel2 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel2 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel2 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel2</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel3 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel3 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel3 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel3</span><!-- /a -->, <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel4 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel4 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel4 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel4</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel5 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel5 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel5 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel5</span><!-- /a -->, <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel6 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel6 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel6 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel6</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel7 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel7 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel7 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel7</span><!-- /a -->, <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel8 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel8 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel8 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel8</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel9 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel9 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel9 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel9</span><!-- /a -->, <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel10 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel10 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel10 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel10</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel11 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel11 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel11 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel11</span><!-- /a -->, <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel12 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel12 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel12 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel12</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel13 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel13 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel13 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel13</span><!-- /a -->, <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel14 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel14 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel14 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel14</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel15 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel15 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel15 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel15</span><!-- /a -->, <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel16 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel16 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel16 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel16</span><!-- /a -->,  
+    <span class="comment">/* Coverage component */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_Alpha //apple_ref/c/data/kvImageBufferTypeCode_Alpha //apple_ref/c/clconst/kvImageBufferTypeCode_Alpha " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_Alpha</span><!-- /a -->,  <span class="comment">/* indexed color spaces */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_Indexed //apple_ref/c/data/kvImageBufferTypeCode_Indexed //apple_ref/c/clconst/kvImageBufferTypeCode_Indexed " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_Indexed</span><!-- /a -->,  <span class="comment">/* YUV formats.  */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_CVPixelBuffer_YCbCr //apple_ref/c/data/kvImageBufferTypeCode_CVPixelBuffer_YCbCr //apple_ref/c/clconst/kvImageBufferTypeCode_CVPixelBuffer_YCbCr " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_CVPixelBuffer_YCbCr</span><!-- /a -->, <span class="comment">/* A YCbCr packed buffer formatted according to types in CVPixelBuffer.h. May be accompanied by an alpha channel */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_Luminance //apple_ref/c/data/kvImageBufferTypeCode_Luminance //apple_ref/c/clconst/kvImageBufferTypeCode_Luminance " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_Luminance</span><!-- /a -->, <span class="comment">/* A Luminance (Y) plane */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_Chroma //apple_ref/c/data/kvImageBufferTypeCode_Chroma //apple_ref/c/clconst/kvImageBufferTypeCode_Chroma " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_Chroma</span><!-- /a -->, <span class="comment">/* A two-channel chroma (CbCr) plane */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_Cb //apple_ref/c/data/kvImageBufferTypeCode_Cb //apple_ref/c/clconst/kvImageBufferTypeCode_Cb " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_Cb</span><!-- /a -->, <span class="comment">/* A blue chroma (Cb) plane */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_Cr //apple_ref/c/data/kvImageBufferTypeCode_Cr //apple_ref/c/clconst/kvImageBufferTypeCode_Cr " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_Cr</span><!-- /a -->, <span class="comment">/* A red chroma (Cr) plane */</span>
+    <span class="comment">/* A interleaved (chunky) format with one or more channels, encodable as a vImage_CGImageFormat */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_CGFormat //apple_ref/c/data/kvImageBufferTypeCode_CGFormat //apple_ref/c/clconst/kvImageBufferTypeCode_CGFormat " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_CGFormat</span><!-- /a -->, <span class="comment">/* always a singleton -- appearing as { kvImageBufferTypeCode_CGFormat, 0} */</span>
+    <span class="comment">/* prior to OS X.10 and iOS 8.0, all vImageConvert_AnyToAny buffers have this type.*/</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_Chunky //apple_ref/c/data/kvImageBufferTypeCode_Chunky //apple_ref/c/clconst/kvImageBufferTypeCode_Chunky " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_Chunky</span><!-- /a -->, <span class="comment">/* always a singleton -- appearing as { kvImageBufferTypeCode_Chunky, 0} */</span>
+    <span class="comment">/* buffer format is not encodable as vImage_CGImageFormat. Not YpCbCr. */</span>
+    <span class="comment">/* must appear after last unique code */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_UniqueFormatCount //apple_ref/c/data/kvImageBufferTypeCode_UniqueFormatCount //apple_ref/c/clconst/kvImageBufferTypeCode_UniqueFormatCount " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_UniqueFormatCount</span><!-- /a -->,  <span class="comment">/* Convenience codes for better code readability */</span>
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_Monochrome //apple_ref/c/tdef/kvImageBufferTypeCode_Monochrome //apple_ref/c/tag/kvImageBufferTypeCode_Monochrome //apple_ref/c/struct/kvImageBufferTypeCode_Monochrome //apple_ref/c/intf/kvImageBufferTypeCode_Monochrome //apple_ref/doc/anysymbol/kvImageBufferTypeCode_Monochrome" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_Monochrome</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel1 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel1</span><!-- /a -->,   
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_RGB_Red //apple_ref/c/tdef/kvImageBufferTypeCode_RGB_Red //apple_ref/c/tag/kvImageBufferTypeCode_RGB_Red //apple_ref/c/struct/kvImageBufferTypeCode_RGB_Red //apple_ref/c/intf/kvImageBufferTypeCode_RGB_Red //apple_ref/doc/anysymbol/kvImageBufferTypeCode_RGB_Red" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_RGB_Red</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel1 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel1</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_RGB_Green //apple_ref/c/tdef/kvImageBufferTypeCode_RGB_Green //apple_ref/c/tag/kvImageBufferTypeCode_RGB_Green //apple_ref/c/struct/kvImageBufferTypeCode_RGB_Green //apple_ref/c/intf/kvImageBufferTypeCode_RGB_Green //apple_ref/doc/anysymbol/kvImageBufferTypeCode_RGB_Green" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_RGB_Green</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel2 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel2 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel2 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel2</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_RGB_Blue //apple_ref/c/tdef/kvImageBufferTypeCode_RGB_Blue //apple_ref/c/tag/kvImageBufferTypeCode_RGB_Blue //apple_ref/c/struct/kvImageBufferTypeCode_RGB_Blue //apple_ref/c/intf/kvImageBufferTypeCode_RGB_Blue //apple_ref/doc/anysymbol/kvImageBufferTypeCode_RGB_Blue" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_RGB_Blue</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel3 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel3 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel3 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel3</span><!-- /a -->,  
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_CMYK_Cyan //apple_ref/c/tdef/kvImageBufferTypeCode_CMYK_Cyan //apple_ref/c/tag/kvImageBufferTypeCode_CMYK_Cyan //apple_ref/c/struct/kvImageBufferTypeCode_CMYK_Cyan //apple_ref/c/intf/kvImageBufferTypeCode_CMYK_Cyan //apple_ref/doc/anysymbol/kvImageBufferTypeCode_CMYK_Cyan" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_CMYK_Cyan</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel1 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel1</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_CMYK_Magenta //apple_ref/c/tdef/kvImageBufferTypeCode_CMYK_Magenta //apple_ref/c/tag/kvImageBufferTypeCode_CMYK_Magenta //apple_ref/c/struct/kvImageBufferTypeCode_CMYK_Magenta //apple_ref/c/intf/kvImageBufferTypeCode_CMYK_Magenta //apple_ref/doc/anysymbol/kvImageBufferTypeCode_CMYK_Magenta" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_CMYK_Magenta</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel2 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel2 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel2 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel2</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_CMYK_Yellow //apple_ref/c/tdef/kvImageBufferTypeCode_CMYK_Yellow //apple_ref/c/tag/kvImageBufferTypeCode_CMYK_Yellow //apple_ref/c/struct/kvImageBufferTypeCode_CMYK_Yellow //apple_ref/c/intf/kvImageBufferTypeCode_CMYK_Yellow //apple_ref/doc/anysymbol/kvImageBufferTypeCode_CMYK_Yellow" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_CMYK_Yellow</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel3 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel3 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel3 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel3</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_CMYK_Black //apple_ref/c/tdef/kvImageBufferTypeCode_CMYK_Black //apple_ref/c/tag/kvImageBufferTypeCode_CMYK_Black //apple_ref/c/struct/kvImageBufferTypeCode_CMYK_Black //apple_ref/c/intf/kvImageBufferTypeCode_CMYK_Black //apple_ref/doc/anysymbol/kvImageBufferTypeCode_CMYK_Black" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_CMYK_Black</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel4 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel4 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel4 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel4</span><!-- /a -->,  
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_XYZ_X //apple_ref/c/tdef/kvImageBufferTypeCode_XYZ_X //apple_ref/c/tag/kvImageBufferTypeCode_XYZ_X //apple_ref/c/struct/kvImageBufferTypeCode_XYZ_X //apple_ref/c/intf/kvImageBufferTypeCode_XYZ_X //apple_ref/doc/anysymbol/kvImageBufferTypeCode_XYZ_X" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_XYZ_X</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel1 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel1</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_XYZ_Y //apple_ref/c/tdef/kvImageBufferTypeCode_XYZ_Y //apple_ref/c/tag/kvImageBufferTypeCode_XYZ_Y //apple_ref/c/struct/kvImageBufferTypeCode_XYZ_Y //apple_ref/c/intf/kvImageBufferTypeCode_XYZ_Y //apple_ref/doc/anysymbol/kvImageBufferTypeCode_XYZ_Y" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_XYZ_Y</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel2 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel2 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel2 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel2</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_XYZ_Z //apple_ref/c/tdef/kvImageBufferTypeCode_XYZ_Z //apple_ref/c/tag/kvImageBufferTypeCode_XYZ_Z //apple_ref/c/struct/kvImageBufferTypeCode_XYZ_Z //apple_ref/c/intf/kvImageBufferTypeCode_XYZ_Z //apple_ref/doc/anysymbol/kvImageBufferTypeCode_XYZ_Z" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_XYZ_Z</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel3 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel3 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel3 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel3</span><!-- /a -->,  
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_LAB_L //apple_ref/c/tdef/kvImageBufferTypeCode_LAB_L //apple_ref/c/tag/kvImageBufferTypeCode_LAB_L //apple_ref/c/struct/kvImageBufferTypeCode_LAB_L //apple_ref/c/intf/kvImageBufferTypeCode_LAB_L //apple_ref/doc/anysymbol/kvImageBufferTypeCode_LAB_L" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_LAB_L</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel1 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel1 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel1</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_LAB_A //apple_ref/c/tdef/kvImageBufferTypeCode_LAB_A //apple_ref/c/tag/kvImageBufferTypeCode_LAB_A //apple_ref/c/struct/kvImageBufferTypeCode_LAB_A //apple_ref/c/intf/kvImageBufferTypeCode_LAB_A //apple_ref/doc/anysymbol/kvImageBufferTypeCode_LAB_A" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_LAB_A</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel2 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel2 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel2 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel2</span><!-- /a -->, 
+    <!-- a logicalPath="//apple_ref/c/cl/kvImageBufferTypeCode_LAB_B //apple_ref/c/tdef/kvImageBufferTypeCode_LAB_B //apple_ref/c/tag/kvImageBufferTypeCode_LAB_B //apple_ref/c/struct/kvImageBufferTypeCode_LAB_B //apple_ref/c/intf/kvImageBufferTypeCode_LAB_B //apple_ref/doc/anysymbol/kvImageBufferTypeCode_LAB_B" machineGenerated="true" --><span class="type">kvImageBufferTypeCode_LAB_B</span><!-- /a --> = <!-- a logicalPath="//apple_ref/c/econst/kvImageBufferTypeCode_ColorSpaceChannel3 //apple_ref/c/data/kvImageBufferTypeCode_ColorSpaceChannel3 //apple_ref/c/clconst/kvImageBufferTypeCode_ColorSpaceChannel3 " machineGenerated="true" --><span class="var">kvImageBufferTypeCode_ColorSpaceChannel3</span><!-- /a -->, 
+};  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/vImageBufferTypeCode;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/tdef/vImageBufferTypeCode;name=start --><p>In rare circumstances, it may be necessary to introspect a vImageConverterRef that consumes
+or produces multiple image planes to find out which color channels go into which planes.
+See vImageConverter_GetSourceBufferOrder and vImageConverter_GetDestinationBufferOrder.
+(This is typically only necessary with video content, because no CG formatted buffers have
+multiple planes.)  The vImageBufferTypeCode encodes what kind of data goes into each channel.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/tdef/vImageBufferTypeCode;name=end --><!-- end discussion -->
+<p class="gapBeforeFooter">&nbsp;</p>
+<hr class="afterFooter">
+<div class="hd_copyright_and_timestamp">
+<p class="hd_copyright">&copy; Copyright (c) 2012-2015 by Apple Inc. All rights reserved.
+
+ </p>
+<p class="hd_timestamp">Last Updated: Thursday, December 24, 2015
+</p>
+</div>
+</td>
+</tr></table>
+</body>
+</html>
